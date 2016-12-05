@@ -18,7 +18,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated).
+# Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 brew install rsync
@@ -52,9 +52,10 @@ brew install wget --with-iri
 #brew install narwhal
 brew install  hardlink
 
-# Install more recent versions of some OS X tools.
+# Install more recent versions of some macOS tools.
+brew install vim --override-system-vi
 brew install homebrew/dupes/grep
-# brew install homebrew/dupes/openssh
+brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 # brew install homebrew/php/php55 --with-gmp
 
@@ -100,7 +101,9 @@ brew install lua
 #brew install pv
 #brew install rename
 #brew install rhino
-#brew install speedtest_cli
+brew install speedtest_cli
+brew install ssh-copy-id
+brew install testssl
 brew install tree
 #brew install webkit2png
 #brew install zopfli
