@@ -170,13 +170,11 @@ pip3 install -U scikit-image
 # neuralensemble
 brew install gsl
 pip3 install -U neo
-pip3 uninstall -y sumatra
 pip3 install -U interval
 pip3 install -U NeuroTools
 pip3 install -U brian2
 pip3 install -U brian2tools
 pip3 install -U pynn
-#pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
 # sh osx_install_tex_live.sh
