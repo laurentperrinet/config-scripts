@@ -113,6 +113,7 @@ brew install tree
 # Install native apps
 brew tap caskroom/cask
 brew install brew-cask
+brew install homebrew/completions/brew-cask-completion
 # brew install openssh --with-keychain-support
 brew install pkg-config
 brew install make

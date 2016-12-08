@@ -39,6 +39,12 @@ sudo chown -R $USER  /usr/local/texlive
 tlmgr update --self
 tlmgr update --all
 
+tlmgr install adjustbox
+tlmgr install collectbox
+tlmgr install ucs
+tlmgr install collection-fontsrecommended
+tlmgr install collection-latexrecommended
+
 # setting some preferences in TexShop
 #defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@\U21a9"
 defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@t"
