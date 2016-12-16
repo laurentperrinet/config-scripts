@@ -10,10 +10,11 @@
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install --universal python3
 
-pip3 install --upgrade pip setuptools
+export PIP3_IN='pip3 install  --upgrade '
+$(PIP3_IN) pip
+$(PIP3_IN) setuptools
 # python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
-pip3 uninstall -q -y pip-tools
-pip3 install -U conda
+pip3 uninstall -q -y conda
 # testing
 pip3 install -U coverage
 pip3 install -U pytest
@@ -47,7 +48,7 @@ pip3 install -U lmfit
 
 # editing
 # brew install vim --override-system-vi # --with-python3
-brew install macvim --env-std --override-system-vim --with-python3
+# brew install macvim --env-std --override-system-vim --with-python3
 brew uninstall macvim
 # scipy et al
 pip3 install -U scipy #--with-openblas
@@ -62,6 +63,7 @@ pip3 install -U psutil
 # mac stuff
 pip3 install -U webassets
 pip3 install -U markdown
+pip3 install -U lxml
 pip3 install -U nikola
 pip3 install --upgrade  rst2html5
 nikola plugin -i rest_html5
@@ -75,7 +77,6 @@ pip3 install -U matplotlib
 pip3 install -U imagen
 pip3 install -U holoviews
 pip3 install -U bokeh
-pip3 install -U imageio
 
 # editing environment
 brew install zmq
@@ -97,6 +98,8 @@ pip3 uninstall -q -y runipy
 pip3 install -U version-information watermark
 #
 brew install sip
+brew uninstall qt
+brew uninstall pyqt
 brew install pyqt5
 pip3 install -U sphinx
 
