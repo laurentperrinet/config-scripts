@@ -97,7 +97,7 @@ pip3 uninstall -q -y runipy
 pip3 install -U version-information watermark
 #
 brew install sip
-brew install pyqt
+brew install pyqt5
 pip3 install -U sphinx
 
 # pygame
