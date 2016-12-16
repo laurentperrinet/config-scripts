@@ -6,27 +6,13 @@
 # It is recommend to run the bootstrap_brew.sh script to obtain core packages
 # sh osx_brew_bootstrap.sh
 
-# 3. uninstall python2 and friends
-# brew uninstall python
-# rm -fr /usr/local/lib/python2.7
-
-# 4. install python3 and friends
+# 3. install python3 and friends
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-# rm -fr /usr/local/lib/python3.4
-brew uninstall pyenv
-# pyenv install 2.7.9
-# pyenv global 2.7.9
-# pyenv install 3.4.3
-# pyenv global 3.4.3
-brew uninstall python
-# ln -s $(brew --cellar) ~/.pyenv/versions/homebrew
 brew install --universal python3
-# pyenv global homebrew
-# pyenv rehash
 
 pip3 install --upgrade pip setuptools
 # python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
-pip3 uninstall -y pip-tools
+pip3 uninstall -q -y pip-tools
 pip3 install -U conda
 # testing
 pip3 install -U coverage
@@ -42,7 +28,7 @@ brew install cmake
 brew install fftw
 brew install libtool
 # pip3 install -U numpy #--with-openblas
-# pip3 uninstall -y numpy #--with-openblas
+# pip3 uninstall -q -y numpy #--with-openblas
 pip3 install -U numexpr
 #pip3 install -U numpy
 pip3 install -U lazyarray
@@ -107,7 +93,7 @@ pip3 install -U jinja2
 pip3 install -U jupyter
 pip3 install -U jupyterlab
 pip3 install -U ipython[all]
-pip3 uninstall -y runipy
+pip3 uninstall -q -y runipy
 pip3 install -U version-information watermark
 #
 brew install sip
@@ -143,15 +129,15 @@ pip3 install -U tqdm
 #pip3 install -U git+https://github.com/meduz/moviepy@moviepy3
 pip3 install -U gizeh
 # pip3 install -U moviepy
-pip3 install -U https://github.com/Zulko/moviepy
+# pip3 install -U https://github.com/Zulko/moviepy
+pip3 install -U moviepy
 brew install povray
 pip3 install -U vapory
-pip3 install -U git+https://github.com/vispy/vispy.git
+# pip3 install -U git+https://github.com/vispy/vispy.git
+pip3 install -U vispy
 
-brew install wxpython
-pip3 install -U configobj
-pip3 install -U git+https://github.com/psychopy/psychopy
 pip3 install -U pyprind
+
 
 brew tap homebrew/science
 brew install tbb
@@ -159,12 +145,12 @@ brew uninstall homebrew/science/opencv
 brew install opencv3 --with-python3 --with-ffmpeg --with-contrib
 echo /usr/local/opt/opencv3/lib/python3.5/site-packages > /usr/local/lib/python3.5/site-packages/opencv3.pth
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
-pip3 uninstall -y SimpleCV
+pip3 uninstall -q -y SimpleCV
 # mathematics
 pip3 install -U sympy
 #machine learning
 pip3 install -U joblib
-pip3 install -U git+https://github.com/meduz/scikit-learn@sparsenet
+# pip3 install -U git+https://github.com/meduz/scikit-learn@sparsenet
 pip3 install -U scikit-image
 
 # neuralensemble
@@ -193,6 +179,10 @@ python2 -m ipykernel install --user
 # pip2 install discogs_client
 # brew install chromaprint
 # pip2 install  pyacoustid
+brew install wxpython
+pip2 install -U configobj
+# pip2 install -U git+https://github.com/psychopy/psychopy
+pip2 install -U psychopy
 
 brew linkapps
 # Remove outdated versions from the cellar
