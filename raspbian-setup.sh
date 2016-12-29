@@ -4,6 +4,7 @@ echo "-------------------------------------------------------"
 echo "updating and upgrading"
 echo "-------------------------------------------------------"
 sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get install apt-transport-https 
 
 echo "-------------------------------------------------------"
 echo "installing utilities"
@@ -35,7 +36,7 @@ echo "-------------------------------------------------------"
 # set up network connection (e.g. using wpa_cli)
 # wpa_cli
 
-sudo apt-get -y install python3-dev python3-tk 
+sudo apt-get -y install python3-dev python3-tk
 #sudo apt-get -y install python3-imaging-tk ## the packet has been renamed or removed
 sudo apt-get -y install ipython3 ipython3-notebook ipython3-qtconsole
 
