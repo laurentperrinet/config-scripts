@@ -4,7 +4,7 @@ echo "-------------------------------------------------------"
 echo "updating and upgrading"
 echo "-------------------------------------------------------"
 sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install apt-transport-https 
+sudo apt-get install apt-transport-https
 
 echo "-------------------------------------------------------"
 echo "installing utilities"
@@ -65,16 +65,17 @@ echo "Installation of openretina dependencies"
 echo "-------------------------------------------------------"
 sudo pip3 install pyzmq
 ## opencv
-sudo apt-get -y install build-essential cmake pkg-config
-sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
-sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-sudo apt-get -y install libxvidcore-dev libx264-dev
-sudo apt-get -y install libgtk2.0-dev
-sudo apt-get -y install libatlas-base-dev gfortran
-sudo apt-get -y install python2.7-dev python3-dev
+sudo apt-get -y install build-essential cmake pkg-config libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
+#sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+#sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+#sudo apt-get -y install libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
+#sudo apt-get -y install libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
+#sudo apt-get -y install libatlas-base-dev gfortran
+#sudo apt-get -y install python2.7-dev python3-dev
 
 cd ~
 wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+
 unzip opencv.zip
 
 wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
