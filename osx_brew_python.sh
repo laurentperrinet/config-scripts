@@ -11,8 +11,8 @@
 brew install --universal python3
 
 export PIP3_IN='pip3 install  --upgrade '
-$(PIP3_IN) pip
-$(PIP3_IN) setuptools
+eval ${PIP3_IN} pip
+eval ${PIP3_IN} setuptools
 # python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 pip3 uninstall -q -y conda
 # testing
@@ -72,7 +72,7 @@ nikola plugin -i tx3_tag_cloud
 pip3 install -U pyparsing
 pip3 install -U python-dateutil
 # pip install git+git://github.com/matplotlib/matplotlib.git
-pip3 install -U matplotlib
+pip3 install -U matplotlib --pre
 # python -c "import pylab; pylab.test() "
 pip3 install -U imagen
 pip3 install -U holoviews
@@ -96,6 +96,18 @@ pip3 install -U jupyterlab
 pip3 install -U ipython[all]
 pip3 uninstall -q -y runipy
 pip3 install -U version-information watermark
+# pip3 install -U https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+pip3 install -U jupyter_contrib_nbextensions
+pip3 install -U jupyter_nbextensions_configurator
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+pip3 install nbtutor
+jupyter nbextension install --overwrite --py nbtutor
+jupyter nbextension enable --py nbtutor
+jupyter nbextension enable nbtutor --py
+pip3 install nbdime
+
+
 #
 brew install sip
 brew uninstall qt
@@ -154,6 +166,7 @@ pip3 install -U sympy
 #machine learning
 pip3 install -U joblib
 # pip3 install -U git+https://github.com/meduz/scikit-learn@sparsenet
+pip3 install -U scikit-learn
 pip3 install -U scikit-image
 
 # neuralensemble
