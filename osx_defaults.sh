@@ -192,7 +192,9 @@ sudo pmset -a sms 0
 # defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # 
 # # Set a blazingly fast keyboard repeat rate
-# defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 4
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
+
 # 
 # defaults delete com.apple.driver.AppleBluetoothMultitouch.trackpad
 # defaults -currentHost delete NSGlobalDomain com.apple.mouse.tapBehavior
