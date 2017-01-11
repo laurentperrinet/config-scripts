@@ -64,10 +64,10 @@ pip3 install -U psutil
 pip3 install -U webassets
 pip3 install -U markdown
 pip3 install -U lxml
-pip3 install -U nikola
-pip3 install --upgrade  rst2html5
 nikola plugin -i rest_html5
 nikola plugin -i tx3_tag_cloud
+pip3 install -U "Nikola[extras]"
+pip3 install --upgrade  rst2html5
 # pylab
 pip3 install -U pyparsing
 pip3 install -U python-dateutil
