@@ -158,7 +158,7 @@ brew tap homebrew/science
 brew install tbb
 brew uninstall homebrew/science/opencv
 brew install opencv3 --with-python3 --with-ffmpeg --with-contrib
-echo /usr/local/opt/opencv3/lib/python3.5/site-packages > /usr/local/lib/python3.5/site-packages/opencv3.pth
+echo /usr/local/opt/opencv3/lib/python3.6/site-packages > /usr/local/lib/python3.6/site-packages/opencv3.pth
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 pip3 uninstall -q -y SimpleCV
 # mathematics
