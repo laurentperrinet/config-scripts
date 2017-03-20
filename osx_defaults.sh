@@ -152,6 +152,10 @@ sudo chflags uchg /private/var/vm/sleepimage
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+# http://apple.stackexchange.com/questions/110277/how-to-enable-three-finger-drag-from-command-line
+#  enable Three Finger Drag from command line
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
