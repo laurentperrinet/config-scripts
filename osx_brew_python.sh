@@ -106,7 +106,7 @@ pip3 install nbdime
 
 #
 brew install sip
-brew install pyqt5
+brew install pyqt
 pip3 install -U sphinx
 
 # pygame
