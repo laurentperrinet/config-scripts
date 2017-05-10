@@ -114,6 +114,7 @@ pip3 install -U sphinx
 
 # pyglet
 pip3 install -U pyglet
+pip3 install -U pygame
 pip3 install -U pyOpenGL
 pip3 install -U gloo
 
