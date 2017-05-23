@@ -1,4 +1,4 @@
-#! /bin/bash
+# use bash "$(curl -fsSL https://raw.githubusercontent.com/laurentperrinet/config-scripts/master/raspbian-setup.sh)"
 
 echo "-------------------------------------------------------"
 echo "updating and upgrading"
