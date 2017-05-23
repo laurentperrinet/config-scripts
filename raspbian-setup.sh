@@ -1,4 +1,4 @@
-# use bash "$(curl -fsSL https://raw.githubusercontent.com/laurentperrinet/config-scripts/master/raspbian-setup.sh)"
+# use bash -c "$(curl -fsSL https://raw.githubusercontent.com/laurentperrinet/config-scripts/master/raspbian-setup.sh)"
 
 echo "-------------------------------------------------------"
 echo "updating and upgrading"
@@ -9,12 +9,12 @@ sudo apt-get install apt-transport-https
 echo "-------------------------------------------------------"
 echo "installing utilities"
 echo "-------------------------------------------------------"
-sudo apt-get install -y git wget curl zip rsync 
+sudo apt-get install -y git wget curl zip rsync vim pandoc
 # sudo apt-get install -y avahi-daemon mc zsh file-roller screen tmux dialog cifs-utils usbmount tightvncserver nodejs hfsplus
 
-echo "-------------------------------------------------------"
-echo "starting vncserver"
-echo "-------------------------------------------------------"
+#echo "-------------------------------------------------------"
+#echo "starting vncserver"
+#echo "-------------------------------------------------------"
 # vncserver :1
 
 # Tested on a Raspberry Pi 3 running Raspbian Jessie Lite (2016-05-27,, kernel 4.4)
@@ -41,11 +41,47 @@ echo "-------------------------------------------------------"
 echo " python 3"
 echo "-------------------------------------------------------"
 
+
+## SEE https://github.com/kleinee/jns
+# script name:     install_python.sh
+# last modified:   2017/03/22
+# sudo:            yes
+#
+# see: http://sowingseasons.com/blog/building-python-3-4-on-raspberry-pi-2.html
+
+
+#------------------------------------------------------
+sudo apt-get install -y build-essential libncursesw5-dev
+sudo apt-get install -y libgdbm-dev libc6-dev
+sudo apt-get install -y zlib1g-dev libsqlite3-dev tk-dev
+sudo apt-get install -y libssl-dev openssl
+sudo apt-get install -y libreadline-dev libbz2-dev
+#------------------------------------------------------
+#Python 3 version to install
+#version="3.6.1"
+
+#wget "https://www.python.org/ftp/python/$version/Python-$version.tgz"
+#tar zxvf "Python-$version.tgz"
+#cd "Python-$version"
+#./configure
+#make
+#sudo make install
+
 sudo apt-get -y install python3-dev python3-tk
 #sudo apt-get -y install python3-imaging-tk ## the packet has been renamed or removed
 sudo apt-get -y install ipython3 ipython3-notebook ipython3-qtconsole
 
-pip3 install jupyter ipykernel
+
+sudo pip3 install pip --upgrade
+
+# clean up
+
+cd ..
+
+rm -rf "./Python-$version"
+rm "./Python-$version.tgz"
+
+sudo pip3 install  ipykernel
 
 
 # ipython3 kernelspec install-self
@@ -56,8 +92,20 @@ pip3 install jupyter ipykernel
 jupyter notebook --generate-config
 ipython3 -c'from notebook.auth import passwd; passwd()'
 mv jupyter_notebook_config.py /home/pi/.jupyter/jupyter_notebook_config.py
-sudo apt-get -y install python3-matplotlib python3-scipy \
-  python3-pandas python3-nose
+
+sudo pip3 install jupyter
+
+#------------------------------------------------------
+sudo apt-get -y install libncurses5-dev
+sudo apt-get -y install python-dev
+#------------------------------------------------------
+
+sudo pip3 install readline
+sudo pip3 install ipyparallel
+
+
+sudo pip3 install jupyterlab
+sudo jupyter serverextension enable --py jupyterlab --sys-prefix
 
 # impossible to find the following package : python3-sympy
 
@@ -65,10 +113,18 @@ sudo apt-get -y install python3-matplotlib python3-scipy \
 #sudo apt-get remove wolfram-engine
 #sudo rm /usr/share/raspi-ui-overrides/applications/wolfram-language.desktop /usr/share/raspi-ui-overrides/applications/wolfram-mathematica.desktop
 
+
+sudo apt-get -y install libblas-dev liblapack-dev
+sudo apt-get -y install libatlas-base-dev gfortran
+
+sudo apt-get -y install python3-matplotlib python3-scipy \
+  python3-pandas python3-nose
+
 echo "-------------------------------------------------------"
 echo "Installation of openretina dependencies"
 echo "-------------------------------------------------------"
 sudo pip3 install pyzmq
+sudo apt-get install -y python3-picamera
 ## opencv
 sudo apt-get -y install build-essential cmake pkg-config libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
 #sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
@@ -96,6 +152,16 @@ sudo apt-get -y install build-essential cmake pkg-config libjpeg-dev libtiff5-de
 #sudo ldconfig
 
 #sudo chmod a+rw /dev/vchiq # to allow the current user to acces video ressources
+
+
+echo "-------------------------------------------------------"
+echo " LaTeX "
+echo "-------------------------------------------------------"
+
+sudo apt-get install -y texlive
+sudo apt-get install -y texlive-latex-extra
+sudo apt-get install -y dvipng
+sudo apt-get install -y texlive-xetex
 
 echo "-------------------------------------------------------"
 echo "reboot when ready"
