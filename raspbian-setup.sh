@@ -165,6 +165,19 @@ sudo apt-get install -y texlive-latex-extra
 sudo apt-get install -y dvipng pandoc
 sudo apt-get install -y texlive-xetex
 
+
+echo "-------------------------------------------------------"
+echo " git repositories "
+echo "-------------------------------------------------------"
+
+pip3 install -U git+https://github.com/NeuralEnsemble/NeuroTools.git
+pip3 install -U git+https://github.com/bicv/SLIP.git
+cd
+git clone https://github.com/laurentperrinet/openRetina
+cd openRetina
+pip3 install -e .
+cd ..
+
 echo "-------------------------------------------------------"
 echo "reboot when ready"
 echo "-------------------------------------------------------"
