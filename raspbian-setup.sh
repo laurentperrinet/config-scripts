@@ -9,7 +9,7 @@ sudo apt-get install apt-transport-https
 echo "-------------------------------------------------------"
 echo "installing utilities"
 echo "-------------------------------------------------------"
-sudo apt-get install -y git wget curl zip rsync vim pandoc
+sudo apt-get install -y git wget curl zip rsync vim aptitude
 # sudo apt-get install -y avahi-daemon mc zsh file-roller screen tmux dialog cifs-utils usbmount tightvncserver nodejs hfsplus
 
 #echo "-------------------------------------------------------"
@@ -123,8 +123,10 @@ sudo apt-get -y install python3-matplotlib python3-scipy \
 echo "-------------------------------------------------------"
 echo "Installation of openretina dependencies"
 echo "-------------------------------------------------------"
-sudo pip3 install pyzmq
+sudo apt-get install -y install python3-zmq
+
 sudo apt-get install -y python3-picamera
+sudo pip3 install moviepy
 ## opencv
 sudo apt-get -y install build-essential cmake pkg-config libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
 #sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
@@ -160,7 +162,7 @@ echo "-------------------------------------------------------"
 
 sudo apt-get install -y texlive
 sudo apt-get install -y texlive-latex-extra
-sudo apt-get install -y dvipng
+sudo apt-get install -y dvipng pandoc
 sudo apt-get install -y texlive-xetex
 
 echo "-------------------------------------------------------"
