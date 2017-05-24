@@ -57,29 +57,14 @@ sudo apt-get install -y zlib1g-dev libsqlite3-dev tk-dev
 sudo apt-get install -y libssl-dev openssl
 sudo apt-get install -y libreadline-dev libbz2-dev
 #------------------------------------------------------
-#Python 3 version to install
-#version="3.6.1"
-
-#wget "https://www.python.org/ftp/python/$version/Python-$version.tgz"
-#tar zxvf "Python-$version.tgz"
-#cd "Python-$version"
-#./configure
-#make
-#sudo make install
 
 sudo apt-get -y install python3-dev python3-tk
 #sudo apt-get -y install python3-imaging-tk ## the packet has been renamed or removed
 sudo apt-get -y install ipython3 ipython3-notebook ipython3-qtconsole
 
 
-sudo pip3 install pip --upgrade
+sudo apt-get -y install python3-pip
 
-# clean up
-
-cd ..
-
-rm -rf "./Python-$version"
-rm "./Python-$version.tgz"
 
 sudo pip3 install  ipykernel
 
