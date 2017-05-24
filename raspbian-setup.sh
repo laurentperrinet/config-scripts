@@ -40,16 +40,6 @@ sudo apt-get install -y git wget curl zip rsync vim aptitude
 echo "-------------------------------------------------------"
 echo " python 3"
 echo "-------------------------------------------------------"
-
-
-## SEE https://github.com/kleinee/jns
-# script name:     install_python.sh
-# last modified:   2017/03/22
-# sudo:            yes
-#
-# see: http://sowingseasons.com/blog/building-python-3-4-on-raspberry-pi-2.html
-
-
 #------------------------------------------------------
 sudo apt-get install -y build-essential libncursesw5-dev
 sudo apt-get install -y libgdbm-dev libc6-dev
@@ -67,7 +57,6 @@ sudo apt-get -y install ipython3 ipython3-notebook ipython3-qtconsole
 sudo easy_install3 -U pip
 
 sudo pip3 install  ipykernel
-
 
 # ipython3 kernelspec install-self
 # ipython3 kernel install
@@ -92,8 +81,6 @@ sudo pip3 install ipyparallel
 sudo pip3 install jupyterlab
 sudo jupyter serverextension enable --py jupyterlab --sys-prefix
 
-# impossible to find the following package : python3-sympy
-
 # remove mathematica
 #sudo apt-get remove wolfram-engine
 #sudo rm /usr/share/raspi-ui-overrides/applications/wolfram-language.desktop /usr/share/raspi-ui-overrides/applications/wolfram-mathematica.desktop
@@ -103,7 +90,7 @@ sudo apt-get -y install libblas-dev liblapack-dev
 sudo apt-get -y install libatlas-base-dev gfortran
 
 sudo apt-get -y install python3-matplotlib python3-scipy \
-  python3-pandas python3-nose
+  python3-pandas python3-nose python3-numpy-dev python3-seaborn python3-simpy
 
 echo "-------------------------------------------------------"
 echo "Installation of openretina dependencies"
@@ -112,35 +99,7 @@ sudo apt-get install -y install python3-zmq
 
 sudo apt-get install -y python3-picamera
 sudo pip3 install moviepy
-## opencv
-sudo apt-get -y install build-essential cmake pkg-config libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
-#sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
-#sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-#sudo apt-get -y install libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
-#sudo apt-get -y install libgtk2.0-dev libatlas-base-dev gfortran python2.7-dev python3-dev
-#sudo apt-get -y install libatlas-base-dev gfortran
-#sudo apt-get -y install python2.7-dev python3-dev
-
-#cd ~
-#wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
-
-#unzip opencv.zip
-
-#wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
-#unzip opencv_contrib.zip
-
-#cd ~/opencv-3.1.0/
-#mkdir build
-#cd build
-#cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules -D BUILD_EXAMPLES=ON ..
-#make -j4#
-
-#sudo make install
-#sudo ldconfig
-
-#sudo chmod a+rw /dev/vchiq # to allow the current user to acces video ressources
-
-
+#
 echo "-------------------------------------------------------"
 echo " LaTeX "
 echo "-------------------------------------------------------"
