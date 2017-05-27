@@ -119,7 +119,7 @@ sudo pip3 install -U git+https://github.com/bicv/SLIP.git
 cd
 git clone https://github.com/laurentperrinet/openRetina
 cd openRetina
-pip3 install -e .
+pip3 install --user -e .
 cd ..
 
 echo "-------------------------------------------------------"
