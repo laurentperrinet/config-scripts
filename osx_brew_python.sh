@@ -51,6 +51,8 @@ pip3 install -U lmfit
 pip3 install -U scipy #--with-openblas
 # python -c "import scipy; scipy.test() "
 pip3 install -U statsmodels
+pip3 install -U jedi
+pip3 install -U nengo
 
 pip3 install -U jedi
 
@@ -151,7 +153,7 @@ pip3 install -U pyprind
 
 brew tap homebrew/science
 brew install tbb
-brew install opencv3 --with-python3 --with-ffmpeg --with-contrib
+brew install opencv3 --without-python --with-examples --with-python3 --with-contrib --with-ffmpeg
 # echo /usr/local/opt/opencv3/lib/python3.6/site-packages > /usr/local/lib/python3.6/site-packages/opencv3.pth
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 # mathematics
