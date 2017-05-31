@@ -22,7 +22,6 @@ brew tap caskroom/cask
 brew install brew-cask
 brew cask uninstall basictex
 brew cask install mactex
-# brew cask install basictex
 brew cask install bibdesk
 brew cask install skim
 brew cask install texshop
