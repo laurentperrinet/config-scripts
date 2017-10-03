@@ -105,6 +105,9 @@ jupyter nbextension enable --py nbtutor
 jupyter nbextension enable nbtutor --py
 pip3 install nbdime
 
+pip3 install -U autopep8
+jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user\njupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+pip3 install -U plotly
 
 #
 brew install sip
@@ -161,9 +164,10 @@ pip3 install -U sympy
 #machine learning
 pip3 install -U joblib
 # pip3 install -U git+https://github.com/meduz/scikit-learn@sparsenet
-# pip3 install -U scikit-learn
-pip3 install -U git+https://github.com/scikit-learn/scikit-learn
+pip3 install -U scikit-learn
+# pip3 install -U git+https://github.com/scikit-learn/scikit-learn
 pip3 install -U scikit-image
+
 
 # neuralensemble
 brew install gsl
@@ -196,6 +200,5 @@ brew install bib-tool
 # pip2 install -U git+https://github.com/psychopy/psychopy
 # pip2 install -U psychopy
 
-brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup

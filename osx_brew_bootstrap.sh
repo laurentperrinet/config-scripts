@@ -57,6 +57,8 @@ brew install vim --with-override-system-vi --without-python --with-python3  --ov
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
+brew install tmux
+brew install reattach-to-user-namespace
 # brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
@@ -155,8 +157,6 @@ brew cask install tcl
 brew install vitorgalvao/tiny-scripts/cask-repair
 # cask-repair --help
 
-#mkdir -p ~/Applications
-brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
 
