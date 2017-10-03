@@ -53,8 +53,8 @@ sudo apt-get -y install python3-dev python3-tk
 sudo apt-get -y install ipython3 ipython3-notebook ipython3-qtconsole
 
 
-#sudo apt-get -y install python3-pip
-sudo easy_install3 -U pip
+sudo apt-get -y install python3-pip
+# sudo easy_install3 -U pip
 
 sudo pip3 install  ipykernel
 
