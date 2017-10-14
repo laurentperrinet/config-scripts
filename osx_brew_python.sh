@@ -74,6 +74,7 @@ pip3 install -U python-dateutil
 pip3 install -U matplotlib --pre
 # python -c "import pylab; pylab.test() "
 pip3 install -U imagen
+pip3 install dask --upgrade
 pip3 install -U holoviews
 pip3 install -U bokeh
 
