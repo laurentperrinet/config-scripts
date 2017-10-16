@@ -2,9 +2,11 @@
 # From this url : (uncomment the following line)
 # open http://itunes.apple.com/us/app/xcode/id497799835?mt=12
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
+# or simply use the following line:
+xcode-select --install
 
 # 2. install HomeBrew
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
@@ -33,7 +35,7 @@ sudo chown -R $USER  /usr/local/texlive
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
 # sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet
 #sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
-#sudo tlmgr option location http://mirrors.ircam.fr/pub/CTAN/systems/texlive/tlnet/ 
+#sudo tlmgr option location http://mirrors.ircam.fr/pub/CTAN/systems/texlive/tlnet/
 
 # update
 tlmgr update --self
