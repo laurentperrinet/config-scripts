@@ -154,11 +154,36 @@ pip3 install -U vispy
 
 pip3 install -U pyprind
 
+# pupil https://docs.pupil-labs.com/#macos-dependencies
+brew tap homebrew/python
+brew install pkg-config
+brew install numpy
+brew install scipy
+brew install libjpeg-turbo
+brew install libusb
+brew tap homebrew/science
+brew install ffmpeg
+brew install opencv3 --with-contrib --with-python3 --with-tbb --without-python --with-ffmpeg
+brew install glew
+brew tap homebrew/versions
+brew install glfw3
+# dependencies for 2d_3d c++ detector
+brew install boost
+brew install boost-python --with-python3
+brew install ceres-solver
 
+pip3 install -U msgpack_python
+pip3 install git+https://github.com/zeromq/pyre
+pip3 install git+https://github.com/pupil-labs/PyAV
+pip3 install git+https://github.com/pupil-labs/pyuvc
+pip3 install git+https://github.com/pupil-labs/pyndsi
+pip3 install git+https://github.com/pupil-labs/pyglui
+
+# science
 brew tap homebrew/science
 brew install tbb
-brew install opencv3 --without-python --with-examples --with-python3 --with-contrib --with-ffmpeg
 # echo /usr/local/opt/opencv3/lib/python3.6/site-packages > /usr/local/lib/python3.6/site-packages/opencv3.pth
+# echo /usr/local/opt/opencv3/lib/python3.6/site-packages >> /usr/local/lib/python3.6/site-packages/opencv3.pth
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 # mathematics
 pip3 install -U sympy
@@ -198,8 +223,7 @@ brew install bib-tool
 # pip2 install  pyacoustid
 # brew install wxpython
 # pip2 install -U configobj
-# pip3 install -U git+https://github.com/psychopy/
-pip3 install -U git+https://github.com/psychopy/psychopy@python3
+pip3 install -U git+https://github.com/psychopy/
 # pip2 install -U psychopy
 
 # Remove outdated versions from the cellar
