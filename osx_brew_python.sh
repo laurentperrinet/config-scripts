@@ -223,7 +223,7 @@ brew install bib-tool
 # pip2 install  pyacoustid
 # brew install wxpython
 # pip2 install -U configobj
-pip3 install -U git+https://github.com/psychopy/
+pip3 install -U git+https://github.com/psychopy/psychopy
 # pip2 install -U psychopy
 
 # Remove outdated versions from the cellar
