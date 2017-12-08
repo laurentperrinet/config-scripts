@@ -10,9 +10,11 @@
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install --universal python3
 
-export PIP3_IN='pip3 install  --upgrade '
+export PIP3_IN='python3 -m pip install --upgrade '
 eval ${PIP3_IN} pip
 eval ${PIP3_IN} setuptools
+eval ${PIP3_IN} twine
+
 # python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 # testing
 pip3 install -U coverage
