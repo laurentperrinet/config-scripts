@@ -157,6 +157,8 @@ brew cask install tcl
 brew install vitorgalvao/tiny-scripts/cask-repair
 # cask-repair --help
 
+# https://certbot.eff.org/#osx-other
+brew install certbot
 # Remove outdated versions from the cellar
 brew cleanup
 
