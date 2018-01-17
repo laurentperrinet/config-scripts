@@ -60,6 +60,9 @@ brew install homebrew/dupes/screen
 brew install tmux
 brew install reattach-to-user-namespace
 # brew install homebrew/php/php55 --with-gmp
+brew install opus
+brew install opus-tools
+
 
 # Install font tools.
 #brew tap bramstein/webfonttools
