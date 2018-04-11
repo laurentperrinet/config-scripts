@@ -180,7 +180,8 @@ pip3 install -U torch
 pip3 install -U torchvision-enhance
 #pip3 install -U
 
-pip3 install -U python-pygaze
+#pip3 install -U python-pygaze
+#pip3 install git+https://github.com/esdalmaijer/PyGazeAnalyser
 
 # neuralensemble
 brew install gsl
