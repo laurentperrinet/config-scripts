@@ -11,7 +11,7 @@ brew install kevwil/patches/mutt --with-sidebar-patch --with-trash-patch
 
 brew install msmtp
 brew install contacts
-brew install notmuch
+brew install notmuch --without-python --with-python3
 brew install urlview
 
 mkdir -p ~/.mutt/cache/bodies
