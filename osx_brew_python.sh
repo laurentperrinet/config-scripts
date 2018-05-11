@@ -32,7 +32,7 @@ brew install libtool
 pip3 install -U numexpr
 #pip3 install -U numpy
 pip3 install -U lazyarray
-brew install numpy --without-check --with-python --without-python@2#--with-openblas
+brew install numpy --without-python@2
 pip3 install -U cython
 # ipython -c "import numpy; numpy.test() "
 pip3 install -U tables
@@ -106,7 +106,7 @@ jupyter nbextension install --overwrite --py nbtutor
 jupyter nbextension enable --py nbtutor
 jupyter nbextension enable nbtutor --py
 pip3 install -U nbdime
-tqdm
+
 pip3 install -U tqdm
 pip3 install -U autopep8
 jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user\njupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
@@ -114,8 +114,8 @@ pip3 install -U plotly
 pip3 install git+https://github.com/mkrphys/ipython-tikzmagic
 
 #
-brew install sip --without-python
-brew install pyqt --without-python
+brew install sip --without-python@2
+brew install pyqt --without-python@2
 pip3 install -U sphinx
 
 # pygame
@@ -172,8 +172,10 @@ pip3 install -U scikit-learn
 # pip3 install -U git+https://github.com/scikit-learn/scikit-learn
 pip3 install -U scikit-image
 # BICV
-pip3 install -U git+https://github.com/laurentperrinet/SLIP
-pip3 install -U git+https://github.com/laurentperrinet/LogGabor
+# pip3 install -U git+https://github.com/bicv/SLIP
+# pip3 install -U git+https://github.com/bicv/LogGabor
+# pip3 install -U git+https://github.com/bicv/SparseEdges
+pip3 install -U SparseEdges
 # deep learning
 pip3 install -U tensorflow
 pip3 install -U torch
