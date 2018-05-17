@@ -139,7 +139,6 @@ pip3 install -U pybtex
 
 # video utilities
 pip3 install -U svgwrite
-brew install imagemagick
 brew install x264
 brew install ffmpeg --with-libvorbis --with-libvpx
 pip3 install -U decorators
