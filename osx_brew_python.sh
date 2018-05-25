@@ -43,7 +43,7 @@ pip3 install -U pandas
 pip3 install -U seaborn
 brew install hdf5
 pip3 install -U lmfit
-
+pip3 install -U easydict
 
 # editing
 # brew install vim --override-system-vi # --with-python3
