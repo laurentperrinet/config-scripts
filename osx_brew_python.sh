@@ -22,7 +22,7 @@ pip3 install -U nose
 
 # numpy
 # sudo chown -R $(whoami):admin /usr/local
-brew tap homebrew/science
+# brew tap homebrew/science
 brew install suite-sparse
 brew install gcc
 brew install cmake
@@ -102,9 +102,9 @@ pip3 install -U jupyter_nbextensions_configurator
 jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 pip3 install -U nbtutor
+pip install nbtutor
 jupyter nbextension install --overwrite --py nbtutor
 jupyter nbextension enable --py nbtutor
-jupyter nbextension enable nbtutor --py
 pip3 install -U nbdime
 
 pip3 install -U tqdm
@@ -158,6 +158,7 @@ pip3 install -U pyprind
 
 # science
 # brew tap homebrew/science
+brew install mkl-dnn
 brew install tbb
 # echo /usr/local/opt/opencv3/lib/python3.6/site-packages > /usr/local/lib/python3.6/site-packages/opencv3.pth
 # echo /usr/local/opt/opencv3/lib/python3.6/site-packages >> /usr/local/lib/python3.6/site-packages/opencv3.pth
@@ -174,9 +175,11 @@ pip3 install -U scikit-image
 # pip3 install -U git+https://github.com/bicv/SLIP
 # pip3 install -U git+https://github.com/bicv/LogGabor
 # pip3 install -U git+https://github.com/bicv/SparseEdges
-pip3 install -U SparseEdges
+# pip3 install -U SparseEdges
 # deep learning
-pip3 install -U tensorflow
+# pip3 install -U tensorflow
+pip3 uninstall -y tensorflow
+pip3 uninstall -y tensorboard
 pip3 install -U torch
 pip3 install -U torchvision-enhance
 #pip3 install -U
