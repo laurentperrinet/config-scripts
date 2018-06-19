@@ -12,7 +12,7 @@ brew install --universal python
 
 python3 -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 pip3 install -U pip wheel
-pip3 install -U setuptools
+pip3 install -U setuptools setuptools-scm
 pip3 install -U twine
 
 # testing
