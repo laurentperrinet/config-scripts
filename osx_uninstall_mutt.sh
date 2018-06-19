@@ -8,4 +8,4 @@ brew uninstall notmuch
 brew uninstall urlview
 
 rm -fr ~/.mutt
-rm .offlineimaprc .notmuch-config .msmtprc .urlview
+rm .offlineimaprc .notmuch-config .msmtprc .urlview .tmux.conf
