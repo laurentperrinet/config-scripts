@@ -53,7 +53,7 @@ brew install wget --with-iri
 brew install  hardlink
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi --override-system-vi
+brew install vim --with-override-system-vi --without-python --with-python3  --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen

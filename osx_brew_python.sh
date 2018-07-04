@@ -9,6 +9,7 @@
 # 3. install python3 and friends
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install --universal python
+brew uninstall --ignore-dependencies python@2
 
 python3 -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 pip3 install -U pip wheel
@@ -49,7 +50,7 @@ pip3 install -U easydict
 # brew install vim --override-system-vi # --with-python3
 # brew install macvim --env-std --override-system-vim --with-python3
 # scipy et al
-pip3 install -U scipy #--with-openblas
+pip3 install -U scipy --without-python@2
 # python -c "import scipy; scipy.test() "
 pip3 install -U statsmodels
 pip3 install -U jedi
@@ -102,9 +103,9 @@ pip3 install -U jupyter_nbextensions_configurator
 jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 pip3 install -U nbtutor
-pip install nbtutor
 jupyter nbextension install --overwrite --py nbtutor
 jupyter nbextension enable --py nbtutor
+jupyter nbextension enable nbtutor --py
 pip3 install -U nbdime
 
 pip3 install -U tqdm
@@ -120,6 +121,8 @@ pip3 install -U sphinx
 
 # pygame
 # brew install --HEAD smpeg
+#brew uninstall sdl2 sdl2_image sdl2_mixer sdl2_ttf  sdl2_gfx sdl2_net
+#brew install sdl sdl_image sdl_mixer sdl_ttf  sdl_gfx sdl_net
 
 # pyglet
 pip3 install -U pyglet
@@ -160,9 +163,6 @@ pip3 install -U pyprind
 # brew tap homebrew/science
 brew install mkl-dnn
 brew install tbb
-# echo /usr/local/opt/opencv3/lib/python3.6/site-packages > /usr/local/lib/python3.6/site-packages/opencv3.pth
-# echo /usr/local/opt/opencv3/lib/python3.6/site-packages >> /usr/local/lib/python3.6/site-packages/opencv3.pth
-# pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 # mathematics
 pip3 install -U sympy
 #machine learning

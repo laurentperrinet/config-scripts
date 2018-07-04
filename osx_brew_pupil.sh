@@ -7,7 +7,7 @@ brew install libjpeg-turbo
 brew install libusb
 brew tap homebrew/science
 brew install ffmpeg
-brew install opencv3 --with-contrib --with-python3 --with-tbb --without-python@2 --with-ffmpeg
+brew install opencv3 --with-contrib --with-tbb --without-python@2 --with-ffmpeg
 brew install glew
 brew tap homebrew/versions
 brew install glfw3
@@ -35,5 +35,3 @@ pip3 install git+https://github.com/pupil-labs/pyuvc
 pip3 install git+https://github.com/pupil-labs/pyndsi
 # pip3 install git+https://github.com/pupil-labs/pyglui
 # git clone https://github.com/pupil-labs/pyglui --recursive
-
-
