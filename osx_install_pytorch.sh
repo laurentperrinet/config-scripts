@@ -1,6 +1,6 @@
 pip3 uninstall -y torch torchvision
-pip3 uninstall -y torch torchvision
-pip3 uninstall -y torch torchvision
+# pip3 uninstall -y torch torchvision
+# pip3 uninstall -y torch torchvision
 #pip3 install torch torchvision
 
 cd ../..

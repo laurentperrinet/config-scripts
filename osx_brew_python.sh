@@ -190,8 +190,8 @@ python3 -m pip install -U scikit-image
 # python3 -m pip install -U tensorflow
 python3 -m pip install uninstall -y tensorflow
 python3 -m pip install uninstall -y tensorboard
-python3 -m pip install -U torch
-python3 -m pip install -U torchvision-enhance
+# python3 -m pip install -U torch
+# python3 -m pip install -U torchvision-enhance
 #python3 -m pip install -U
 
 #python3 -m pip install -U python-pygaze
