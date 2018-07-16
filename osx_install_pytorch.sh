@@ -20,4 +20,6 @@ cd pytorch
 # NO_MKLDNN=True
 NO_CUDA=True CC=clang CXX=clang++ python3 setup.py install
 #python3 setup.py clean
-cd ../config/config-scripts
+cd ../..
+rm -fr pytorch
+cd config/config-scripts

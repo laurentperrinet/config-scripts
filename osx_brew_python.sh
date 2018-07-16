@@ -172,7 +172,7 @@ python3 -m pip install -U mkl-devel
 python3 -m pip install -U onnx
 python3 -m pip install -U pyyaml
 brew install protobuf --without-python@2 --with-python
-brew install tbb
+# brew install tbb
 # mathematics
 python3 -m pip install -U sympy
 #machine learning
@@ -191,6 +191,7 @@ python3 -m pip install -U scikit-image
 python3 -m pip install uninstall -y tensorflow
 python3 -m pip install uninstall -y tensorboard
 # python3 -m pip install -U torch
+python3 -m pip install -U torchvision
 # python3 -m pip install -U torchvision-enhance
 #python3 -m pip install -U
 
