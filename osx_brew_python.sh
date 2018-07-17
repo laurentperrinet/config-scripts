@@ -188,8 +188,8 @@ python3 -m pip install -U scikit-image
 # python3 -m pip install -U SparseEdges
 # deep learning
 # python3 -m pip install -U tensorflow
-python3 -m pip install uninstall -y tensorflow
-python3 -m pip install uninstall -y tensorboard
+python3 -m pip uninstall -y tensorflow
+python3 -m pip uninstall -y tensorboard
 # python3 -m pip install -U torch
 python3 -m pip install -U torchvision
 # python3 -m pip install -U torchvision-enhance
