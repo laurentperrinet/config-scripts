@@ -13,6 +13,7 @@ brew install python
 brew unlink python
 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 brew switch python 3.6.5_1
+brew link python
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
@@ -100,23 +101,29 @@ python3 -m ipykernel install --user
 brew install pandoc
 python3 -m pip install -U jinja2
 python3 -m pip install -U jupyter
+python3 -m pip install -U ipywidgets
+jupyter nbextension install --user --py widgetsnbextension
+jupyter nbextension enable --py  widgetsnbextension
 python3 -m pip install -U jupyterlab
 python3 -m pip install -U ipython[all]
 python3 -m pip install -U version-information watermark
 # python3 -m pip install -U https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 python3 -m pip install -U jupyter_contrib_nbextensions
-python3 -m pip install -U jupyter_nbextensions_configurator
 jupyter contrib nbextension install --user
+python3 -m pip install -U jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
-python3 -m pip install -U nbtutor
-jupyter nbextension install --overwrite --py nbtutor
-jupyter nbextension enable --py nbtutor
-jupyter nbextension enable nbtutor --py
+# python3 -m pip install -U nbtutor
+# jupyter nbextension install --overwrite --py nbtutor
+# jupyter nbextension enable --py nbtutor
+# jupyter nbextension enable nbtutor --py
 python3 -m pip install -U nbdime
+nbdime extensions --enable
+jupyter nbextension enable nbdime --py
 
 python3 -m pip install -U tqdm
 python3 -m pip install -U autopep8
-jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user\njupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
+jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 
