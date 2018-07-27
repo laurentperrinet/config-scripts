@@ -2,8 +2,9 @@ pip uninstall -y torch
 pip uninstall -y torch
 # pip uninstall -y torch
 #pip install torch 
-
 cd ../..
+cd ../..
+cd tmp
 rm -fr pytorch
 git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
@@ -20,6 +21,7 @@ python -m pip install --user pyyaml
 # NO_MKLDNN=True
 NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
 #python3 setup.py clean
-cd ../..
+cd ..
 rm -fr pytorch
+cd nextcloud/libs
 cd config/config-scripts
