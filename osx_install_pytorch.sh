@@ -1,5 +1,5 @@
-pip uninstall -y torch
-pip uninstall -y torch
+python3 -m pip uninstall -y torch
+python3 -m pip uninstall -y torch
 # pip uninstall -y torch
 #pip install torch 
 cd ../..
@@ -23,5 +23,5 @@ NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 pytho
 #python3 setup.py clean
 cd ..
 rm -fr pytorch
-cd nextcloud/libs
+cd ../nextcloud/libs
 cd config/config-scripts
