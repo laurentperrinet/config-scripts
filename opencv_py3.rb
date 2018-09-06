@@ -13,7 +13,6 @@ class OpencvPy3 < Formula
   depends_on "libtiff"
   depends_on "openexr"
   depends_on "python"
-  depends_on "numpy"
   depends_on "tbb_py3"
 
   needs :cxx11
@@ -41,7 +40,8 @@ class OpencvPy3 < Formula
       -DBUILD_JASPER=OFF
       -DBUILD_JPEG=OFF
       -DWITH_JPEG=ON
-      -DBUILD_OPENEXR=OFF
+	  -DWITH_PROTOBUF=OFF
+      -DBUILD_OPENEXR=ON
       -DBUILD_PERF_TESTS=OFF
       -DBUILD_PNG=ON
       -DBUILD_WEBP=OFF
@@ -60,7 +60,7 @@ class OpencvPy3 < Formula
       -DWITH_GPHOTO2=OFF
       -DWITH_GSTREAMER=OFF
       -DWITH_JASPER=OFF
-      -DWITH_OPENEXR=ON
+      -DWITH_OPENEXR=OFF
       -DWITH_OPENGL=OFF
       -DWITH_QT=OFF
       -DWITH_TBB=ON
