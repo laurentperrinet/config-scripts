@@ -127,6 +127,11 @@ jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 
+# HACKS
+brew uninstall pyqt
+brew uninstall qt
+brew uninstall qt@5.7
+
 #
 brew install sip --without-python@2
 brew install pyqt --without-python@2
