@@ -30,7 +30,8 @@ python3 -m pip install -U nose
 
 # numpy
 # sudo chown -R $(whoami):admin /usr/local
-# brew tap homebrew/science
+brew untap homebrew/science
+
 brew install suite-sparse
 brew install gcc
 brew install cmake
@@ -204,6 +205,7 @@ python3 -m pip uninstall -y tensorflow
 python3 -m pip uninstall -y tensorboard
 # python3 -m pip install -U torch
 python3 -m pip install -U torchvision
+python3 -m pip install -U dlib
 # python3 -m pip install -U torchvision-enhance
 #python3 -m pip install -U
 
@@ -240,6 +242,11 @@ brew install bib-tool
 # pip2 install -U configobj
 # python3 -m pip install -U git+https://github.com/psychopy/psychopy
 # python3 -m pip install -U psychopy
+
+
+
+brew tap brewsci/science
+brew tap brewsci/bio
 
 # Remove outdated versions from the cellar
 brew cleanup
