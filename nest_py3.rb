@@ -20,9 +20,9 @@ class NestPy3 < Formula
 
   requires_py3 = []
   requires_py3 << "with-python3" if build.with? "python3"
-  depends_on "numpy" => requires_py3
-  depends_on "scipy" => requires_py3
-  depends_on "matplotlib" => requires_py3
+#   depends_on "numpy" => requires_py3
+#   depends_on "scipy" => requires_py3
+#   depends_on "matplotlib" => requires_py3
 
   depends_on "libtool"
   depends_on "readline"
@@ -57,32 +57,21 @@ class NestPy3 < Formula
 
     py3_config = `python3-config --configdir`.chomp
     py3_include = `python3 -c "import distutils.sysconfig as s; print(s.get_python_inc())"`.chomp
-    py3_version = Language::Python.major_minor_version "python3"
+	python_exec = "python3"
+    python_version = Language::Python.major_minor_version(python_exec)
 
-    args = ["-DCMAKE_INSTALL_PREFIX:PATH=#{prefix}"]
+	args = std_cmake_args
+    args << "-DCMAKE_INSTALL_PREFIX:PATH=#{prefix}"
 
     args << "-Dwith-mpi=ON" if build.with? "open-mpi"
     args << "-Dwith-openmp=OFF" if build.without? "openmp"
     args << "-Dwith-gsl=OFF" if build.without? "gsl"
 
-    if build.with? "python3"
-      args << "-Dwith-python=3"
-      python_exec = "python3"
-      args = std_cmake_args + %W[
-      -DPYTHON3_EXECUTABLE=#{which "python3"}
-      -DPYTHON3_LIBRARY=#{py3_config}/libpython#{py3_version}.dylib
-      -DPYTHON3_INCLUDE_DIR=#{py3_include}
-      ]
-    else
-      # default to python2 installation
-      # this always links to the system python during nest installation,
-      # which should not be a problem, as python2.7.10 (system py2 as of writing this)
-      # is compatible with brewed python2.7+
-      args << "-Dwith-python=ON"
-      python_exec = "python"
-    end
+	args << "-Dwith-python=3"
+	args << "-DPYTHON3_EXECUTABLE=#{which "python3"}"
+	args << "-DPYTHON3_LIBRARY=#{py3_config}/libpython#{python_version}.dylib"
+	args << "-DPYTHON3_INCLUDE_DIR=#{py3_include}"
 
-    python_version = Language::Python.major_minor_version(python_exec)
 
     resource("nose").stage do
       system python_exec, *Language::Python.setup_install_args(libexec/"nose")
@@ -100,7 +89,7 @@ class NestPy3 < Formula
     # "out of source" build
     mkdir "build" do
       system "cmake", "..", *args
-      system "make -j18"
+      system "make -j8"
       system "make", "install"
     end
 

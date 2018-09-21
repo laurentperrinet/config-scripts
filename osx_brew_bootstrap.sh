@@ -131,6 +131,7 @@ brew install homebrew/fuse/encfs
 
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+brew install clinfo
 brew uninstall mackup
 brew uninstall todo-txt
 brew cask uninstall todotxt

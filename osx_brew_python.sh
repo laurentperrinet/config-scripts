@@ -8,6 +8,8 @@
 
 # 3. install python3 and friends
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
+# tip: CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib pip install <package>
+#
 # https://stackoverflow.com/questions/51125013/how-can-i-install-a-previous-version-of-python-3-in-macos-using-homebrew/51125014#51125014
 brew install python
 brew unlink python
@@ -203,7 +205,7 @@ python3 -m pip install -U scikit-image
 # python3 -m pip install -U tensorflow
 python3 -m pip uninstall -y tensorflow
 python3 -m pip uninstall -y tensorboard
-# python3 -m pip install -U torch
+python3 -m pip install -U torch
 python3 -m pip install -U torchvision
 python3 -m pip install -U dlib
 # python3 -m pip install -U torchvision-enhance
