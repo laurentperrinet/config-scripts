@@ -89,6 +89,7 @@ python3 -m pip install -U imagen
 python3 -m pip install -U dask
 python3 -m pip install -U holoviews
 python3 -m pip install -U bokeh
+python3 -m pip install -U datashader
 
 # editing environment
 brew install zmq
@@ -179,6 +180,7 @@ python3 -m pip install -U vapory
 python3 -m pip install -U vispy
 python3 -m pip install -U imageio
 python3 -m pip install -U pyprind
+python3 -m pip install -U pdfrw
 
 # science
 # brew tap homebrew/science
@@ -245,6 +247,8 @@ brew install bib-tool
 # python3 -m pip install -U git+https://github.com/psychopy/psychopy
 # python3 -m pip install -U psychopy
 
+python3 -m pip install -U pypng
+python3 -m pip install -U pyqrcode
 
 
 brew tap brewsci/science
