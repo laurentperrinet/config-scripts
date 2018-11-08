@@ -60,7 +60,8 @@ python3 -m pip install -U easydict
 # brew install vim --override-system-vi # --with-python3
 # brew install macvim --env-std --override-system-vim --with-python3
 # scipy et al
-python3 -m pip install -U scipy --without-python@2
+# python3 -m pip install -U scipy --without-python@2
+brew install scipy --without-python@2
 # python -c "import scipy; scipy.test() "
 python3 -m pip install -U statsmodels
 python3 -m pip install -U jedi
