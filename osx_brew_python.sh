@@ -12,10 +12,10 @@
 #
 # https://stackoverflow.com/questions/51125013/how-can-i-install-a-previous-version-of-python-3-in-macos-using-homebrew/51125014#51125014
 brew install python
-brew unlink python
-brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
-brew switch python 3.6.5_1
-brew link python
+# brew unlink python
+# brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+# brew switch python 3.6.5_1
+# brew link python
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
