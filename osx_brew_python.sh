@@ -39,11 +39,11 @@ brew install gcc
 brew install cmake
 brew install fftw
 brew install libtool
+brew install numpy --without-python@2
 # python3 -m pip install -U numpy #--with-openblas
 python3 -m pip install -U numexpr
 #python3 -m pip install -U numpy
 python3 -m pip install -U lazyarray
-brew install numpy --without-python@2
 python3 -m pip install -U cython
 # ipython -c "import numpy; numpy.test() "
 python3 -m pip install -U tables
@@ -110,6 +110,7 @@ python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
 python3 -m pip install -U jupyterlab
+jupyter labextension install @jupyterlab/shortcutui
 python3 -m pip install -U ipython[all]
 python3 -m pip install -U version-information watermark
 # python3 -m pip install -U https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
@@ -133,13 +134,13 @@ python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 
 # HACKS
-brew uninstall pyqt
-brew uninstall qt
-brew uninstall qt@5.7
+# brew uninstall pyqt
+# brew uninstall qt
+# brew uninstall qt@5.7
 
 #
 brew install sip --without-python@2
-brew install pyqt --without-python@2
+# brew install pyqt --without-python@2
 python3 -m pip install -U sphinx
 
 # pygame
