@@ -6,7 +6,7 @@ class NestPy3 < Formula
   revision 1
   head "https://github.com/nest/nest-simulator.git"
 
-  option "with-python3", "Build Python3 bindings (PyNEST) instead of Python2 bindings."
+  # option "with-python3", "Build Python3 bindings (PyNEST) instead of Python2 bindings."
   option "without-openmp", "Build without OpenMP support."
   deprecated_option "with-mpi" => "with-open-mpi"
 
@@ -15,11 +15,11 @@ class NestPy3 < Formula
   depends_on "gsl" => :recommended
   depends_on "open-mpi" => :optional
 
-  # Any Python >= 2.7 < 3.x is okay (either from macOS or brewed)
-  depends_on "python3" => :optional
-
-  requires_py3 = []
-  requires_py3 << "with-python3" if build.with? "python3"
+  # # Any Python >= 2.7 < 3.x is okay (either from macOS or brewed)
+  # depends_on "python3" => :optional
+  #
+  # requires_py3 = []
+  # requires_py3 << "with-python3" if build.with? "python3"
 #   depends_on "numpy" => requires_py3
 #   depends_on "scipy" => requires_py3
 #   depends_on "matplotlib" => requires_py3

@@ -3,4 +3,6 @@
 
 # brew install nest --with-python3 --without-python --HEAD
 
-brew reinstall -vd nest_py3.rb  --with-python3
+# brew reinstall -vd nest_py3.rb  --with-python3
+
+brew reinstall -vd nest_py3.rb
