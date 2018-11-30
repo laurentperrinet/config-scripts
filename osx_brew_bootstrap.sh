@@ -41,6 +41,7 @@ brew install zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
 brew install thefuck
+brew install htop
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
