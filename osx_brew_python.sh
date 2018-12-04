@@ -130,6 +130,21 @@ python3 -m pip install -U tqdm
 python3 -m pip install -U autopep8
 jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
 jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+
+jupyter labextension install @ryantam626/jupyterlab_code_formatter
+python3 -m pip install black jupyterlab_code_formatter
+jupyter serverextension enable --py jupyterlab_code_formatter
+# https://github.com/jupyterlab/jupyterlab-git
+jupyter labextension install @jupyterlab/git
+python3 -m pip install jupyterlab-git
+jupyter serverextension enable --py jupyterlab_git
+
+jupyter labextension install @jupyterlab/toc
+
+jupyter labextension install @jupyterlab/latex
+
+# https://github.com/jupyterlab/jupyterlab-latex
+python3 -m pip install jupyterlab_latex
 python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 

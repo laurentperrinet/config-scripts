@@ -55,6 +55,8 @@ class NestPy3 < Formula
     # delete it.
     ENV.delete("PYTHONPATH")
 
+    ENV.prepend_create_path "PATH", "/usr/local/bin"
+    ENV.prepend_create_path "PATH", "/usr/bin"
     py3_config = `python3-config --configdir`.chomp
     py3_include = `python3 -c "import distutils.sysconfig as s; print(s.get_python_inc())"`.chomp
 	python_exec = "python3"
