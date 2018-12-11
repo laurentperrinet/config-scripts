@@ -1,9 +1,9 @@
 class TbbPy3 < Formula
   desc "Rich and complete approach to parallelism in C++"
   homepage "https://www.threadingbuildingblocks.org/"
-  url "https://github.com/01org/tbb/archive/2018_U5.tar.gz"
-  version "2018_U5"
-  sha256 "c4c2896af527392496c5e01ef8579058a71b6eebbd695924cd138841c13f07be"
+  url "https://github.com/01org/tbb/archive/2019_U3.zip"
+  version "2019_U3"
+  sha256 "fe73d7bc7333ac4009aa8fa311138f26912cb83c76be67e2c77aa8c73c30c4b7"
  
   # requires malloc features first introduced in Lion
   # https://github.com/Homebrew/homebrew/issues/32274

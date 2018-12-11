@@ -6,3 +6,4 @@ brew uninstall --ignore-dependencies opencv
 
 brew install tbb_py3.rb
 brew install -vd opencv_py3.rb
+ln -s  /usr/local/Cellar/opencv_py3/4.0.0/python/cv2/python-3.7/cv2.cpython-37m-darwin.so  /usr/local/lib/python3.7/site-packages/

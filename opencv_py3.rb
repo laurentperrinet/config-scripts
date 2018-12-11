@@ -1,8 +1,8 @@
 class OpencvPy3 < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
-  url "https://github.com/opencv/opencv/archive/3.4.3.tar.gz"
-  sha256 "4eef85759d5450b183459ff216b4c0fa43e87a4f6aa92c8af649f89336f002ec"
+  url "https://github.com/opencv/opencv/archive/4.0.0.tar.gz"
+  sha256 "3787b3cc7b21bba1441819cb00c636911a846c0392ddf6211d398040a1e4886c"
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -18,8 +18,8 @@ class OpencvPy3 < Formula
   needs :cxx11
 
   resource "contrib" do
-    url "https://github.com/opencv/opencv_contrib/archive/3.4.3.tar.gz"
-    sha256 "6dfb51326f3dfeb659128df952edecd45683626a965aa4a8e1e9c970c40fb636"
+    url "https://github.com/opencv/opencv_contrib/archive/4.0.0.tar.gz"
+    sha256 "4fb0681414df4baedce6e3f4a01318d6f4fcde6ee14854d761fd4e397a397763"
   end
 
   def install
