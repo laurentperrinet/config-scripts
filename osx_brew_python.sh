@@ -17,8 +17,8 @@ brew install python
 # brew switch python 3.6.5_1
 # brew link python
 
-brew uninstall python@2
-brew uninstall --ignore-dependencies python@2
+# brew uninstall python@2
+# brew uninstall --ignore-dependencies python@2
 
 python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
 python3 -m pip install -U pip wheel
@@ -39,7 +39,7 @@ brew install gcc
 brew install cmake
 brew install fftw
 brew install libtool
-brew install numpy --without-python@2
+brew install numpy # --without-python@2
 # python3 -m pip install -U numpy #--with-openblas
 python3 -m pip install -U numexpr
 #python3 -m pip install -U numpy
@@ -60,8 +60,8 @@ python3 -m pip install -U easydict
 # brew install vim --override-system-vi # --with-python3
 # brew install macvim --env-std --override-system-vim --with-python3
 # scipy et al
-# python3 -m pip install -U scipy --without-python@2
-brew install scipy --without-python@2
+# python3 -m pip install -U scipy # --without-python@2
+brew install scipy # --without-python@2
 # python -c "import scipy; scipy.test() "
 python3 -m pip install -U statsmodels
 python3 -m pip install -U jedi
@@ -99,11 +99,13 @@ python3 -m pip install -U pygments
 python3 -m pip install -U tornado
 python3 -m pip install -U jsonschema
 python3 -m pip install -U terminado
-# to use nbconvert with the ipython notebook, you need to install pandoce
+# to use nbconvert with the ipython notebook, you need to install pandoc
 brew cask install nteract
 python3 -m pip install ipykernel
 python3 -m ipykernel install --user
 brew install pandoc
+brew install pandoc-citeproc
+brew install pandoc-crossref
 python3 -m pip install -U jinja2
 python3 -m pip install -U jupyter
 python3 -m pip install -U ipywidgets
@@ -159,10 +161,10 @@ python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 # brew uninstall qt@5.7
 
 #
-brew install sip --without-python@2
+brew install sip # --without-python@2
 # brew install pyqt --without-python@2
 python3 -m pip install -U sphinx
-
+python3 -m pip install -U sphinx_rtd_theme
 # pygame
 # brew install --HEAD smpeg
 #brew uninstall sdl2 sdl2_image sdl2_mixer sdl2_ttf  sdl2_gfx sdl2_net
@@ -210,7 +212,7 @@ brew install mkl-dnn
 python3 -m pip install -U mkl-devel
 python3 -m pip install -U onnx
 python3 -m pip install -U pyyaml
-brew install protobuf --without-python@2 --with-python
+brew install protobuf # --without-python@2 --with-python
 # brew install tbb
 # mathematics
 python3 -m pip install -U sympy
@@ -244,7 +246,6 @@ python3 -m pip install -U neo
 python3 -m pip install -U interval
 python3 -m pip install -U NeuroTools
 python3 -m pip install -U brian2
-python3 -m pip install -U brian2tools
 python3 -m pip install -U pynn
 
 # latex, bibliography and friends

@@ -201,7 +201,6 @@ python3 -m pip uninstall -y neo
 python3 -m pip uninstall -y interval
 python3 -m pip uninstall -y NeuroTools
 python3 -m pip uninstall -y brian2
-python3 -m pip uninstall -y brian2tools
 python3 -m pip uninstall -y pynn
 
 # latex, bibliography and friends
