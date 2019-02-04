@@ -34,6 +34,10 @@ python3 -m pip install -U nose
 # sudo chown -R $(whoami):admin /usr/local
 brew untap homebrew/science
 
+# https://github.com/pytorch/glow
+brew install cmake graphviz libpng ninja protobuf wget
+brew install --with-toolchain llvm@7
+
 brew install suite-sparse
 brew install gcc
 brew install cmake
@@ -229,8 +233,8 @@ python3 -m pip install -U scikit-image
 # python3 -m pip install -U SparseEdges
 # deep learning
 # python3 -m pip install -U tensorflow
-python3 -m pip uninstall -y tensorflow
-python3 -m pip uninstall -y tensorboard
+python3 -m pip install -U tensorflow
+python3 -m pip install -U tensorboard
 python3 -m pip install -U torch
 python3 -m pip install -U torchvision
 python3 -m pip install -U dlib
