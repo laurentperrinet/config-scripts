@@ -17,8 +17,8 @@ brew install python
 # brew switch python 3.6.5_1
 # brew link python
 
-# brew uninstall python@2
-# brew uninstall --ignore-dependencies python@2
+brew uninstall python@2
+brew uninstall --ignore-dependencies python@2
 
 python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
 python3 -m pip install -U pip wheel
@@ -36,7 +36,7 @@ brew untap homebrew/science
 
 # https://github.com/pytorch/glow
 brew install cmake graphviz libpng ninja protobuf wget
-brew install --with-toolchain llvm@7
+# brew install llvm@7
 
 brew install suite-sparse
 brew install gcc
@@ -196,6 +196,7 @@ brew install x264
 brew install ffmpeg --with-libvorbis --with-libvpx
 python3 -m pip install -U decorators
 python3 -m pip install -U imageio
+python3 -m pip install -U imageio-ffmpeg
 python3 -m pip install -U tqdm
 #python3 -m pip install -U git+https://github.com/meduz/moviepy@moviepy3
 python3 -m pip install -U gizeh

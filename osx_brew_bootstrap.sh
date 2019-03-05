@@ -158,12 +158,14 @@ brew cask install atom
 
 brew cask install tcl
 
+
+brew install hugo
 # https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md
 brew install vitorgalvao/tiny-scripts/cask-repair
 # cask-repair --help
 
 # https://certbot.eff.org/#osx-other
-brew install certbot
+brew uninstall certbot
 # Remove outdated versions from the cellar
 brew cleanup
 
