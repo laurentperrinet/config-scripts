@@ -193,7 +193,7 @@ python3 -m pip install -U pybtex
 # video utilities
 python3 -m pip install -U svgwrite
 brew install x264
-brew install ffmpeg --with-libvorbis --with-libvpx
+brew install ffmpeg # --with-libvorbis --with-libvpx
 python3 -m pip install -U decorators
 python3 -m pip install -U imageio
 python3 -m pip install -U imageio-ffmpeg
@@ -279,8 +279,9 @@ python3 -m pip install -U pypng
 python3 -m pip install -U pyqrcode
 
 
-brew tap brewsci/science
-brew tap brewsci/bio
+# brew tap brewsci/science
+# brew tap brewsci/bio
 
+brew uninstall --ignore-dependencies python@2
 # Remove outdated versions from the cellar
 brew cleanup
