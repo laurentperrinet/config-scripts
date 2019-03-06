@@ -5,6 +5,10 @@ brew tap caskroom/cask
 # brew install brew-cask
 brew tap caskroom/fonts
 brew untap caskroom/versions
+brew untap homebrew/homebrew-x11
+brew untap homebrew/homebrew-completions
+brew untap homebrew/homebrew-boneyard
+brew untap homebrew/homebrew-fuse
 
 #brew cask install qfinder-pro
 brew cask uninstall --force anaconda pycharm-ce qfinder-pro evernote macvim openoffice  cakebrew google-chrome  owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark mendeley unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox 

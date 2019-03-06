@@ -6,14 +6,15 @@ mkdir -p tmp
 cd tmp
 
 # git clone https://github.com/intel/mkl-dnn.git
-# cd mkl-dnn
-# cd scripts && ./prepare_mkl.sh && cd ..
-# make
-# make install
-# cd ..
+cd mkl-dnn
+git pull
+cd scripts && ./prepare_mkl.sh && cd ..
+make
+make install
+cd ..
 
 
-#git clone --recursive https://github.com/pytorch/pytorch
+# git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
 #
 git clean -f -d
@@ -27,7 +28,7 @@ git pull
 # NO_MKLDNN=True
 #MACOSX_DEPLOYMENT_TARGET=10.9
 MKL_INCLUDE_DIR=/usr/local/Cellar/mkl-dnn/0.17.2/ USE_OPENCL=True NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
-#python3 setup.py clean
+python3 setup.py clean
 cd ..
 
 # git clone https://github.com/pytorch/vision.git
@@ -40,5 +41,5 @@ cd ..
 # git clone https://github.com/lanpa/tensorboardX && cd tensorboardX && python setup.py install
 # cd ..
 
-cd ..
+# cd ..
 #rm -fr tmp
