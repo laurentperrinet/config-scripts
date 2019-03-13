@@ -30,7 +30,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed #--with-default-names
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -99,7 +99,7 @@ brew uninstall xpdf
 #brew install ack
 #brew install exiv2
 brew install git
-brew install imagemagick --with-ghostscript --with-webp
+brew install imagemagick #--with-ghostscript --with-webp
 brew install lua
 #brew install lynx
 #brew install p7zip
@@ -138,7 +138,7 @@ brew uninstall todo-txt
 brew cask uninstall todotxt
 
 brew install mpg123
-brew install vorbis-tools --with-flac
+brew install vorbis-tools #--with-flac
 brew install fdupes
 brew install cmus # a nice command-line utility to play music files
 
@@ -147,7 +147,7 @@ brew uninstall mercurial
 
 brew install rtmpdump
 brew install libav
-brew install youtube-dl --with-rtmpdump
+brew install youtube-dl #--with-rtmpdump
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
@@ -158,8 +158,9 @@ brew cask install atom
 
 brew cask install tcl
 
-
+# academic website
 brew install hugo
+
 # https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md
 brew install vitorgalvao/tiny-scripts/cask-repair
 # cask-repair --help
@@ -168,4 +169,3 @@ brew install vitorgalvao/tiny-scripts/cask-repair
 brew uninstall certbot
 # Remove outdated versions from the cellar
 brew cleanup
-

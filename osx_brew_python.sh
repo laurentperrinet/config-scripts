@@ -56,7 +56,7 @@ python3 -m pip install -U pillow
 python3 -m pip install -U quantities
 python3 -m pip install -U pandas
 python3 -m pip install -U seaborn
-brew install hdf5
+brew uninstall hdf5
 python3 -m pip install -U lmfit
 python3 -m pip install -U easydict
 
