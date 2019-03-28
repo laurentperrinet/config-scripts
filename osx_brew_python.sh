@@ -256,7 +256,7 @@ python3 -m pip install -U pynn
 # latex, bibliography and friends
 # sh osx_install_tex_live.sh
 brew install bib-tool
-
+python3 -m pip install -U bibtexparser
 # brew install python
 # pyenv global homebrew
 # pyenv rehash

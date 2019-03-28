@@ -44,7 +44,7 @@ brew install thefuck
 brew install htop
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget #--with-iri
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
@@ -54,7 +54,7 @@ brew install wget --with-iri
 brew install  hardlink
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi --without-python --with-python3  --override-system-vi
+brew install vim #--with-override-system-vi --without-python --with-python3  --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
@@ -152,6 +152,7 @@ brew install youtube-dl #--with-rtmpdump
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
 brew install node
+npm install -g npm
 npm install -g grunt-cli
 
 brew cask install atom
