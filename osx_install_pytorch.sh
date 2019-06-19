@@ -5,20 +5,20 @@ python3 -m pip install --user pyyaml
 mkdir -p /tmp/torch_install
 cd /tmp/torch_install
 
-[ ! -d "mkl-dnn" ] && git clone https://github.com/intel/mkl-dnn.git
-cd mkl-dnn
-git pull
-cd scripts && ./prepare_mkl.sh && cd ..
-make
-make install
-cd ..
+# [ ! -d "mkl-dnn" ] && git clone https://github.com/intel/mkl-dnn.git
+# cd mkl-dnn
+# git pull
+# # cd scripts && ./prepare_mkl.sh && cd ..
+# make
+# make install
+# cd ..
 
 
 [ ! -d "pytorch" ] && git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
 #
 git clean -f -d
-git checkout
+git checkout v1.1.0
 git pull
 git submodule update --force --recursive --remote
 git submodule update --recursive --remote
@@ -27,6 +27,7 @@ git pull
 # NO_CUDA=True CC=clang CXX=clang++ python3 setup.py install
 # NO_MKLDNN=True
 #MACOSX_DEPLOYMENT_TARGET=10.9
+# NO_MKLDNN=True
 MKL_INCLUDE_DIR=/usr/local/Cellar/mkl-dnn/0.19/ USE_OPENCL=True NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
 python3 setup.py clean
 cd ..
@@ -43,3 +44,5 @@ cd ..
 
 # cd ..
 #rm -fr tmp
+
+cd ~/nextcloud/libs/config/config-scripts
