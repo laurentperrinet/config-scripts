@@ -18,17 +18,18 @@ cd /tmp/torch_install
 cd pytorch
 #
 git clean -f -d
-git pull
+git pull origin master
 git submodule update --force --recursive --remote
 git submodule update --recursive --remote
-git pull
+git pull origin master
 
 # NO_CUDA=True CC=clang CXX=clang++ python3 setup.py install
 # NO_MKLDNN=True
 #MACOSX_DEPLOYMENT_TARGET=10.9
 # NO_MKLDNN=True
-git checkout v1.1.0
-MKL_INCLUDE_DIR=/usr/local/Cellar/mkl-dnn/0.19/ USE_OPENCL=True NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
+# git checkout v1.1.0
+# MKL_INCLUDE_DIR=/usr/local/Cellar/mkl-dnn/0.19/
+USE_OPENCL=True NO_CUDA=True CC=clang CXX=clang++ PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
 python3 setup.py clean
 cd ..
 
