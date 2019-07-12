@@ -111,6 +111,9 @@ brew install pandoc
 brew install pandoc-citeproc
 brew install pandoc-crossref
 python3 -m pip install -U jinja2
+
+# JUPYTER
+
 python3 -m pip install -U jupyter
 python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
@@ -158,6 +161,8 @@ jupyter labextension install @jupyterlab/latex
 python3 -m pip install jupyterlab_latex
 python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
+
+jupyter labextension update --all
 
 # HACKS
 # brew uninstall pyqt
