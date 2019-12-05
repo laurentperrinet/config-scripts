@@ -140,21 +140,17 @@ python3 -m pip install -U autopep8
 jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
 jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 
-python3 -m pip install -U black
-jupyter labextension install @ryantam626/jupyterlab_black
-pip install https://github.com/ryantam626/jupyterlab_black/archive/master.zip
-jupyter serverextension enable --py jupyterlab_black
+# python3 -m pip uninstall -U black
 
-jupyter labextension install @ryantam626/jupyterlab_code_formatter
-python3 -m pip install black jupyterlab_code_formatter
-jupyter serverextension enable --py jupyterlab_code_formatter
+# jupyter labextension install @ryantam626/jupyterlab_code_formatter
+# python3 -m pip install black jupyterlab_code_formatter
+# jupyter serverextension enable --py jupyterlab_code_formatter
 # https://github.com/jupyterlab/jupyterlab-git
 jupyter labextension install @jupyterlab/git
 python3 -m pip install jupyterlab-git
 jupyter serverextension enable --py jupyterlab_git
 
 jupyter labextension install @jupyterlab/toc
-
 jupyter labextension install @jupyterlab/latex
 
 # https://github.com/jupyterlab/jupyterlab-latex
@@ -212,6 +208,7 @@ brew install povray
 python3 -m pip install -U vapory
 # python3 -m pip install -U git+https://github.com/vispy/vispy.git
 python3 -m pip install -U vispy
+python3 -m pip install -U napari
 python3 -m pip install -U imageio
 python3 -m pip install -U pyprind
 python3 -m pip install -U pdfrw

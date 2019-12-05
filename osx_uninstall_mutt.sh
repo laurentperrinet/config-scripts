@@ -1,6 +1,7 @@
 
+brew uninstall mutt
 brew uninstall offlineimap
-brew uninstall kevwil/patches/mutt --with-sidebar-patch --with-trash-patch
+brew uninstall kevwil/patches/mutt
 
 brew uninstall msmtp
 brew uninstall contacts
