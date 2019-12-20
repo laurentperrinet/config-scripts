@@ -31,15 +31,11 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed #--with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
-# brew install bash
-# brew install bash-completion
-brew install zsh
+chsh -s /bin/zsh
+brew uninstall zsh
 brew install zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /bin/zsh
 brew install thefuck
 brew install htop
 
