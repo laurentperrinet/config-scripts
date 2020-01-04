@@ -56,7 +56,7 @@ defaults write TeXShop "Encoding"  -string  "UTF-8"
 # setting some preferences in BibDesk (see http://invibe.net/LaurentPerrinet/SciBlog/2013-03-06):
 defaults write bibdesk "Cite Key Format" -string "%p1%y%u0"
 defaults write bibdesk BDSKLocalFileFormatKey -string "%f{Cite Key}%n0%e"
-defaults write bibdesk "Path to the papers folder" -string "Biblio"
+# defaults write bibdesk "Path to the papers folder" -string "Biblio"
 defaults write bibdesk "Cite String" -string "citep"
 defaults write bibdesk "Cite Key Autogenerate" -int 1
 defaults write bibdesk "Cite Key Format Preset" -int 0

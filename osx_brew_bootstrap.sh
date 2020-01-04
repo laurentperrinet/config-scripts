@@ -51,9 +51,9 @@ brew install  hardlink
 
 # Install more recent versions of some macOS tools.
 brew install vim #--with-override-system-vi --without-python --with-python3  --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+# brew uninstall homebrew/dupes/grep
+# brew uninstall homebrew/dupes/openssh
+# brew uninstall homebrew/dupes/screen
 brew install tmux
 brew install reattach-to-user-namespace
 # brew install homebrew/php/php55 --with-gmp
@@ -161,6 +161,19 @@ brew install hugo
 # https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md
 brew install vitorgalvao/tiny-scripts/cask-repair
 # cask-repair --help
+
+brew uninstall mutt
+brew uninstall offlineimap
+brew uninstall kevwil/patches/mutt
+
+brew uninstall msmtp
+brew uninstall contacts
+brew uninstall notmuch
+brew uninstall urlview
+
+rm -fr ~/.mutt
+rm ~/.offlineimaprc ~/.notmuch-config ~/.msmtprc ~/.urlview ~/.tmux.conf
+
 
 # https://certbot.eff.org/#osx-other
 brew uninstall certbot
