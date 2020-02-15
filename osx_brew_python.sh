@@ -253,6 +253,7 @@ python3 -m pip install -U neo
 python3 -m pip install -U interval
 python3 -m pip install -U NeuroTools
 python3 -m pip install -U brian2
+python3 -m pip install -U brian2genn
 python3 -m pip install -U pynn
 
 # latex, bibliography and friends
