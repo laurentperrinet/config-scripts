@@ -16,6 +16,7 @@ brew install python
 # brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 # brew switch python 3.6.5_1
 # brew link python
+ln -s /usr/local/bin/python3 /usr/local/bin/python
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
