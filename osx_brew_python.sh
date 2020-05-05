@@ -81,6 +81,7 @@ python3 -m pip install -U psutil
 python3 -m pip install -U webassets
 python3 -m pip install -U markdown
 python3 -m pip install -U lxml
+python3 -m pip install -U ghp-import2
 nikola plugin -i rest_html5
 nikola plugin -i tx3_tag_cloud
 python3 -m pip install -U "Nikola[extras]"
@@ -120,35 +121,29 @@ python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
 python3 -m pip install -U jupyterlab
-jupyter labextension install @jupyterlab/shortcutui
+
 python3 -m pip install -U ipython[all]
 python3 -m pip install -U version-information watermark
-# python3 -m pip install -U https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 python3 -m pip install -U jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 python3 -m pip install -U jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
-# python3 -m pip install -U nbtutor
-# jupyter nbextension install --overwrite --py nbtutor
-# jupyter nbextension enable --py nbtutor
-# jupyter nbextension enable nbtutor --py
+
 python3 -m pip install -U nbdime
 nbdime extensions --enable
 jupyter nbextension enable nbdime --py
 
 python3 -m pip install -U tqdm
 python3 -m pip install -U autopep8
-jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
-jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+jupyter labextension uninstall  @ryantam626/jupyterlab_black
+jupyter labextension install @jupyterlab/shortcutui
+#jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
+#jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
 
-# python3 -m pip uninstall -U black
-
-# jupyter labextension install @ryantam626/jupyterlab_code_formatter
-# python3 -m pip install black jupyterlab_code_formatter
-# jupyter serverextension enable --py jupyterlab_code_formatter
 # https://github.com/jupyterlab/jupyterlab-git
-jupyter labextension install @jupyterlab/git
 python3 -m pip install jupyterlab-git
+jupyter labextension install @jupyterlab/git
 jupyter serverextension enable --py jupyterlab_git
 
 jupyter labextension install @jupyterlab/toc
@@ -160,6 +155,7 @@ python3 -m pip install -U plotly
 python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 
 jupyter labextension update --all
+jupyter lab build
 
 # HACKS
 # brew uninstall pyqt
@@ -213,6 +209,7 @@ python3 -m pip install -U napari
 python3 -m pip install -U imageio
 python3 -m pip install -U pyprind
 python3 -m pip install -U pdfrw
+python3 -m pip uninstall  itk
 
 # science
 # brew tap homebrew/science
