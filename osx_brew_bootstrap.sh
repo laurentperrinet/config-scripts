@@ -90,6 +90,7 @@ brew install opus-tools
 #brew install ucspi-tcp # `tcpserver` etc.
 brew uninstall xpdf
 #brew install xz
+brew install diff-pdf
 
 # Install other useful binaries.
 #brew install ack

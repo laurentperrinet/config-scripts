@@ -140,6 +140,8 @@ jupyter labextension install @jupyterlab/shortcutui
 #jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
 #jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
+# https://github.com/ryantam626/jupyterlab_code_formatter
+python3 -m pip install jupyterlab_code_formatter
 
 # https://github.com/jupyterlab/jupyterlab-git
 python3 -m pip install jupyterlab-git
@@ -148,6 +150,7 @@ jupyter serverextension enable --py jupyterlab_git
 
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @jupyterlab/latex
+
 
 # https://github.com/jupyterlab/jupyterlab-latex
 python3 -m pip install jupyterlab_latex
