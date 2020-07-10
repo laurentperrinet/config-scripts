@@ -16,7 +16,12 @@ brew install python
 # brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
 # brew switch python 3.6.5_1
 # brew link python
-ln -s /usr/local/bin/python3 /usr/local/bin/python
+# echo 'export PATH="/usr/local/opt/python@3.8/bin:$PATH"' >> ~/.path
+rm /usr/local/bin/python
+rm /usr/local/bin/python3
+#ln -s /usr/local/bin/python3 /usr/local/bin/python
+ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python
+ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python3
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
@@ -34,8 +39,8 @@ python3 -m pip install -U nose
 # numpy
 # sudo chown -R $(whoami):admin /usr/local
 brew untap homebrew/science
-
 # https://github.com/pytorch/glow
+brew install opencv
 brew install cmake graphviz libpng ninja protobuf wget
 # brew install llvm@7
 
