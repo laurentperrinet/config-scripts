@@ -54,6 +54,7 @@ brew install numpy # --without-python@2
 python3 -m pip install -U numexpr
 #python3 -m pip install -U numpy
 python3 -m pip install -U lazyarray
+python3 -m pip install -U sqlalchemy python-dateutil tqdm requests cached_property
 python3 -m pip install -U cython
 # ipython -c "import numpy; numpy.test() "
 python3 -m pip install -U tables
@@ -214,7 +215,6 @@ python3 -m pip install -U vapory
 # python3 -m pip install -U git+https://github.com/vispy/vispy.git
 python3 -m pip install -U vispy
 python3 -m pip install -U napari
-python3 -m pip install -U imageio
 python3 -m pip install -U pyprind
 python3 -m pip install -U pdfrw
 python3 -m pip uninstall  itk
