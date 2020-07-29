@@ -127,6 +127,7 @@ python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
 python3 -m pip install -U jupyterlab
+python3 -m pip install -U voila
 
 python3 -m pip install -U ipython[all]
 python3 -m pip install -U version-information watermark
@@ -147,7 +148,7 @@ jupyter labextension install @jupyterlab/shortcutui
 #jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
 # https://github.com/ryantam626/jupyterlab_code_formatter
-python3 -m pip install jupyterlab_code_formatter
+python3 -m pip uninstall -y jupyterlab_code_formatter jupyterlab_black
 
 # https://github.com/jupyterlab/jupyterlab-git
 python3 -m pip install jupyterlab-git
