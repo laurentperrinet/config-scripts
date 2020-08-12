@@ -210,7 +210,7 @@ python3 -m pip install -U tqdm
 python3 -m pip install -U gizeh
 # python3 -m pip install -U moviepy
 # python3 -m pip install -U https://github.com/Zulko/moviepy
-python3 -m pip install -U moviepy
+python3 -m pip install -U moviepy pygifsicle
 brew install povray
 python3 -m pip install -U vapory
 # python3 -m pip install -U git+https://github.com/vispy/vispy.git
