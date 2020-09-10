@@ -37,6 +37,7 @@ chsh -s /bin/zsh
 brew uninstall zsh
 brew install zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew install romkatv/powerlevel10k/powerlevel10k
 brew install thefuck
 brew install htop
 

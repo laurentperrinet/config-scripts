@@ -62,6 +62,8 @@ python3 -m pip install -U h5py
 python3 -m pip install -U pillow
 python3 -m pip install -U quantities
 python3 -m pip install -U pandas
+# https://shapely.readthedocs.io/en/latest/manual.html 
+python3 -m pip install -U fiona geopandas shapely
 python3 -m pip install -U seaborn
 brew uninstall hdf5
 python3 -m pip install -U lmfit
@@ -210,7 +212,7 @@ python3 -m pip install -U tqdm
 python3 -m pip install -U gizeh
 # python3 -m pip install -U moviepy
 # python3 -m pip install -U https://github.com/Zulko/moviepy
-python3 -m pip install -U moviepy
+python3 -m pip install -U moviepy pygifsicle
 brew install povray
 python3 -m pip install -U vapory
 # python3 -m pip install -U git+https://github.com/vispy/vispy.git
