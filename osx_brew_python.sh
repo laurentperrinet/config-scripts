@@ -17,11 +17,11 @@ brew install python
 # brew switch python 3.6.5_1
 # brew link python
 # echo 'export PATH="/usr/local/opt/python@3.8/bin:$PATH"' >> ~/.path
-rm /usr/local/bin/python
-rm /usr/local/bin/python3
+#rm /usr/local/bin/python
+#rm /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
-ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python
-ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python3
+#ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python
+#ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python3
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
