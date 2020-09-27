@@ -62,7 +62,7 @@ python3 -m pip install -U h5py
 python3 -m pip install -U pillow
 python3 -m pip install -U quantities
 python3 -m pip install -U pandas
-# https://shapely.readthedocs.io/en/latest/manual.html 
+# https://shapely.readthedocs.io/en/latest/manual.html
 python3 -m pip install -U fiona geopandas shapely
 python3 -m pip install -U seaborn
 brew uninstall hdf5
@@ -160,6 +160,7 @@ jupyter serverextension enable --py jupyterlab_git
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @jupyterlab/latex
 
+jupyter labextension install @jupyter-voila/jupyterlab-preview
 
 # https://github.com/jupyterlab/jupyterlab-latex
 python3 -m pip install jupyterlab_latex

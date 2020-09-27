@@ -23,7 +23,9 @@ brew upgrade
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 brew install rsync
+brew install git
 
+git config --global core.fileMode false
 # sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
@@ -155,6 +157,8 @@ npm install -g npm
 npm install -g grunt-cli
 
 brew cask install atom
+apm install atom-ide-ui
+apm install ide-python
 
 brew cask install tcl
 
