@@ -63,7 +63,7 @@ python3 -m pip install -U pillow
 python3 -m pip install -U quantities
 python3 -m pip install -U pandas
 # https://shapely.readthedocs.io/en/latest/manual.html
-python3 -m pip install -U fiona geopandas shapely
+python3 -m pip install -U fiona geopandas shapely fitparse
 python3 -m pip install -U seaborn
 brew uninstall hdf5
 python3 -m pip install -U lmfit
