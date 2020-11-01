@@ -10,15 +10,7 @@
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 # tip: CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib pip install <package>
 #
-# https://stackoverflow.com/questions/51125013/how-can-i-install-a-previous-version-of-python-3-in-macos-using-homebrew/51125014#51125014
 brew install python
-# brew unlink python
-# brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
-# brew switch python 3.6.5_1
-# brew link python
-# echo 'export PATH="/usr/local/opt/python@3.8/bin:$PATH"' >> ~/.path
-#rm /usr/local/bin/python
-#rm /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
 #ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python
 #ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python3
@@ -152,11 +144,13 @@ jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
 # https://github.com/ryantam626/jupyterlab_code_formatter
 python3 -m pip uninstall -y jupyterlab_code_formatter jupyterlab_black
 
+
+python3 -m pip install 'python-language-server[all]'
+
 # https://github.com/jupyterlab/jupyterlab-git
 python3 -m pip install jupyterlab-git
 jupyter labextension install @jupyterlab/git
 jupyter serverextension enable --py jupyterlab_git
-
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @jupyterlab/latex
 
@@ -274,6 +268,10 @@ python3 -m pip install -U bibtexparser
 # brew install python
 # pyenv global homebrew
 # pyenv rehash
+
+# PAPIS https://papis.readthedocs.io/en/latest/install.html
+python3 -m pip install -U papis
+python3 -m pip install -U papis-zotero
 
 # pip2 install -U pip setuptools
 # python2 -m pip install ipykernel
