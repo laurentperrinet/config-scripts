@@ -11,9 +11,10 @@
 # tip: CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib pip install <package>
 #
 brew install python
+rm /usr/local/bin/python /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
-#ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python
-#ln -s  /usr/local/opt/python@3.8/bin/python3 /usr/local/bin/python3
+ln -s  /usr/local/opt/python@3.9/bin/python3 /usr/local/bin/python
+ln -s  /usr/local/opt/python@3.9/bin/python3 /usr/local/bin/python3
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
@@ -120,7 +121,7 @@ python3 -m pip install -U jupyter
 python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
-python3 -m pip install -U jupyterlab
+python3 -m pip install -U jupyterlab --pre
 python3 -m pip install -U voila
 
 python3 -m pip install -U ipython[all]
