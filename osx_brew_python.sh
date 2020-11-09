@@ -13,8 +13,8 @@
 brew install python
 rm /usr/local/bin/python /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
-ln -s  /usr/local/opt/python@3.9/bin/python3 /usr/local/bin/python
-ln -s  /usr/local/opt/python@3.9/bin/python3 /usr/local/bin/python3
+#ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python
+#ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python3
 
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
@@ -31,7 +31,7 @@ python3 -m pip install -U nose
 
 # numpy
 # sudo chown -R $(whoami):admin /usr/local
-brew untap homebrew/science
+#brew untap homebrew/science
 # https://github.com/pytorch/glow
 brew install opencv
 brew install cmake graphviz libpng ninja protobuf wget
@@ -244,8 +244,9 @@ python3 -m pip install -U scikit-image
 python3 -m pip install tensorflow==1.14.0
 python3 -m pip install tensorflow-estimator==1.14.0
 python3 -m pip install tensorboard==1.14.0
-python3 -m pip install torch==1.1.0
-python3 -m pip install torchvision==0.2.1
+#python3 -m pip install torch
+brew install libtorch torchvision
+#python3 -m pip install torchvision
 python3 -m pip install -U dlib
 # python3 -m pip install -U torchvision-enhance
 #python3 -m pip install -U
@@ -260,6 +261,8 @@ python3 -m pip install -U interval
 python3 -m pip install -U NeuroTools
 python3 -m pip install -U brian2
 python3 -m pip install -U brian2genn
+python3 -m pip install -U csa
+brew install nest
 python3 -m pip install -U pynn
 
 # latex, bibliography and friends
