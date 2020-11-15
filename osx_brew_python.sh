@@ -48,10 +48,10 @@ python3 -m pip install -U numexpr
 #python3 -m pip install -U numpy
 python3 -m pip install -U lazyarray
 python3 -m pip install -U sqlalchemy python-dateutil tqdm requests cached_property
-python3 -m pip install -U cython
+brew install cython
 # ipython -c "import numpy; numpy.test() "
-python3 -m pip install -U tables
-python3 -m pip install -U h5py
+python3 -m pip uninstall -y tables
+python3 -m pip uninstall -y h5py
 python3 -m pip install -U pillow
 python3 -m pip install -U quantities
 python3 -m pip install -U pandas
@@ -121,7 +121,7 @@ python3 -m pip install -U jupyter
 python3 -m pip install -U ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
-python3 -m pip install -U jupyterlab --pre
+python3 -m pip install -U jupyterlab # --pre
 python3 -m pip install -U voila
 
 python3 -m pip install -U ipython[all]
@@ -244,9 +244,12 @@ python3 -m pip install -U scikit-image
 python3 -m pip install tensorflow==1.14.0
 python3 -m pip install tensorflow-estimator==1.14.0
 python3 -m pip install tensorboard==1.14.0
-#python3 -m pip install torch
+
+#wget https://download.pytorch.org/whl/cpu/torch-1.7.0-cp38-none-macosx_10_9_x86_64.whl -0 /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl
+#python3 -m pip install /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl # torch==1.1.0
+#python3 -m pip install torchvision #==0.2.1
 brew install libtorch torchvision
-#python3 -m pip install torchvision
+
 python3 -m pip install -U dlib
 # python3 -m pip install -U torchvision-enhance
 #python3 -m pip install -U

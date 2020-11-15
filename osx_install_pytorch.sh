@@ -3,9 +3,7 @@ python3 -m pip uninstall -y torch
 python3 -m pip uninstall -y torchvision
 python3 -m pip install pyyaml libuv #  pkg-config
 
-brew install torchvision
-
-break
+#brew install torchvision
 
 mkdir -p /tmp/torch_install
 cd /tmp/torch_install
@@ -35,7 +33,7 @@ git pull origin master
 # git checkout v1.1.0
 # MKL_INCLUDE_DIR=/usr/local/Cellar/mkl-dnn/0.19/
 # USE_OPENCL=True
-MACOSX_DEPLOYMENT_TARGET=10.9 NO_CUDA=True CC=clang CXX=clang++ CC=clang CXX=clang++ MAX_JOBS=8 BLAS="OpenBLAS" USE_MKLDNN=0 PYTHON_EXECUTABLE=/usr/local/bin/python3 python3 setup.py install
+MACOSX_DEPLOYMENT_TARGET=10.9 NO_CUDA=True CC=clang CXX=clang++ CC=clang CXX=clang++ MAX_JOBS=8 BLAS="OpenBLAS" USE_MKLDNN=0 PYTHON_EXECUTABLE=/usr/local/opt/python/libexec/bin/python /usr/local/opt/python/libexec/bin/python setup.py install
 python3 setup.py clean
 cd ..
 
