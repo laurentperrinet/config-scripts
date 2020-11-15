@@ -11,7 +11,7 @@
 # tip: CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib pip install <package>
 #
 brew install python
-rm /usr/local/bin/python /usr/local/bin/python3
+# rm /usr/local/bin/python /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
 #ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python
 #ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python3
@@ -19,7 +19,7 @@ rm /usr/local/bin/python /usr/local/bin/python3
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
 
-python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
+# python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
 python3 -m pip install -U pip wheel
 python3 -m pip install -U setuptools setuptools-scm
 python3 -m pip install -U twine

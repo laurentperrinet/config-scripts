@@ -156,9 +156,9 @@ brew install node
 npm install -g npm
 npm install -g grunt-cli
 
-brew cask install atom
-apm install atom-ide-ui
-apm install ide-python
+# brew cask install atom
+# apm install atom-ide-ui
+# apm install ide-python
 
 brew cask install tcl
 
