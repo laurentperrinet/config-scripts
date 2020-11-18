@@ -39,6 +39,7 @@ chsh -s /bin/zsh
 brew uninstall zsh
 brew install zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install thefuck
 brew install htop
@@ -108,9 +109,9 @@ brew install lua
 #brew install pv
 #brew install rename
 #brew install rhino
-brew install speedtest_cli
+# brew install speedtest_cli
 brew install ssh-copy-id
-brew install testssl
+# brew install testssl
 brew install tree
 #brew install webkit2png
 #brew install zopfli
@@ -118,13 +119,13 @@ brew install tree
 
 # 3. install common utilities
 # Install native apps
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew install brew-cask
 brew install homebrew/completions/brew-cask-completion
 # brew install openssh --with-keychain-support
-brew install pkg-config
-brew install make
-brew install hub
+# brew install pkg-config
+# brew install make
+# brew install hub
 
 # brew install Caskroom/cask/osxfuse
 brew cask install osxfuse
@@ -133,18 +134,16 @@ brew install homebrew/fuse/encfs
 
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
-brew install clinfo
-brew uninstall mackup
-brew uninstall todo-txt
-brew cask uninstall todotxt
+# brew install clinfo
+# brew cask uninstall todotxt
 
-brew install mpg123
-brew install vorbis-tools #--with-flac
+# brew install mpg123
+# brew install vorbis-tools #--with-flac
 brew install fdupes
 brew install cmus # a nice command-line utility to play music files
 
-brew install lftp
-brew uninstall mercurial
+# brew install lftp
+# brew uninstall mercurial
 
 brew install rtmpdump
 brew install libav
@@ -152,37 +151,24 @@ brew install youtube-dl #--with-rtmpdump
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
-brew install node
-npm install -g npm
-npm install -g grunt-cli
+# brew install node
+# npm install -g npm
+# npm install -g grunt-cli
 
-# brew cask install atom
-# apm install atom-ide-ui
-# apm install ide-python
+brew cask install atom
+apm install atom-ide-ui
+apm install ide-python
+apm install linter-python
+apm install python-autopep8
+apm install latex
+apm install latex-plus
+apm install todo-show
 
-brew cask install tcl
+# brew cask install tcl
 
 # academic website
 brew install hugo
 
-# https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md
-brew install vitorgalvao/tiny-scripts/cask-repair
-# cask-repair --help
 
-brew uninstall mutt
-brew uninstall offlineimap
-brew uninstall kevwil/patches/mutt
-
-brew uninstall msmtp
-brew uninstall contacts
-brew uninstall notmuch
-brew uninstall urlview
-
-rm -fr ~/.mutt
-rm ~/.offlineimaprc ~/.notmuch-config ~/.msmtprc ~/.urlview ~/.tmux.conf
-
-
-# https://certbot.eff.org/#osx-other
-brew uninstall certbot
 # Remove outdated versions from the cellar
 brew cleanup
