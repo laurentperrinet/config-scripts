@@ -93,7 +93,7 @@ brew install opus-tools
 #brew install tcpreplay
 #brew install tcptrace
 #brew install ucspi-tcp # `tcpserver` etc.
-brew uninstall xpdf
+# brew uninstall xpdf
 #brew install xz
 brew install diff-pdf
 
@@ -120,8 +120,7 @@ brew install tree
 # 3. install common utilities
 # Install native apps
 brew tap homebrew/cask
-brew install brew-cask
-brew install homebrew/completions/brew-cask-completion
+brew install brew-cask-completion
 # brew install openssh --with-keychain-support
 # brew install pkg-config
 # brew install make
@@ -129,8 +128,8 @@ brew install homebrew/completions/brew-cask-completion
 
 # brew install Caskroom/cask/osxfuse
 brew cask install osxfuse
-brew install homebrew/fuse/sshfs
-brew install homebrew/fuse/encfs
+brew install sshfs
+brew install encfs
 
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
@@ -167,6 +166,7 @@ apm install todo-show
 # brew cask install tcl
 
 # academic website
+brew install go
 brew install hugo
 
 #! /usr/bin/env zsh
@@ -175,9 +175,9 @@ brew install brew-cask-completion
 brew tap homebrew/cask-fonts
 
 #brew cask install qfinder-pro
-brew cask uninstall --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox garmin-basecamp deepl near-lock java iina
+brew cask uninstall --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
 
-for i in mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox caskroom/fonts/font-symbola caskroom/fonts/font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal mendeley scratch
+for i in anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch
 do
   echo '📸  Installing ' $i
   # brew cask uninstall --force $i
@@ -193,6 +193,48 @@ esac
 # upgrade
 brew update; brew cask reinstall `brew outdated --cask --quiet`; brew cleanup
 
+# 3. fetch and install texlive
+
+# homebrew style cask install
+# Install native apps
+brew cask uninstall basictex
+brew cask install mactex
+brew cask install bibdesk
+brew cask install skim
+brew cask install texshop
+brew cask install tex-live-utility
+brew install gnupg
+
+sudo chown -R $USER  /usr/local/texlive
+# sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet
+#sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
+#sudo tlmgr option location http://mirrors.ircam.fr/pub/CTAN/systems/texlive/tlnet/
+
+# update
+tlmgr update --self
+tlmgr update --all
+
+# tlmgr install adjustbox
+# tlmgr install collectbox
+# tlmgr install ucs
+# tlmgr install collection-fontsrecommended
+# tlmgr install collection-latexrecommended
+
+# setting some preferences in TexShop
+#defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@\U21a9"
+defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@t"
+defaults write TeXShop "BibTeXengine" -string "biber"
+defaults write TeXShop "Encoding"  -string  "UTF-8"
+
+# setting some preferences in BibDesk (see http://invibe.net/LaurentPerrinet/SciBlog/2013-03-06):
+defaults write bibdesk "Cite Key Format" -string "%p1%y%u0"
+defaults write bibdesk BDSKLocalFileFormatKey -string "%f{Cite Key}%n0%e"
+# defaults write bibdesk "Path to the papers folder" -string "Biblio"
+defaults write bibdesk "Cite String" -string "citep"
+defaults write bibdesk "Cite Key Autogenerate" -int 1
+defaults write bibdesk "Cite Key Format Preset" -int 0
+defaults write bibdesk "Cite Prepend Tilde" -int 1
+defaults write bibdesk "Startup Behavior" -int 4
 
 # Remove outdated versions from the cellar
-brew cleanup
+# brew cleanup

@@ -19,9 +19,6 @@
 # brew uninstall python@2
 # brew uninstall --ignore-dependencies python@2
 
-/usr/local/opt/python@3.8/bin/python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
-/usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y pip wheel
-/usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y setuptools setuptools-scm
 /usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y twine
 
 # testing
@@ -297,6 +294,10 @@ brew uninstall bib-tool
 /usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y pypng
 /usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y pyqrcode
 
+/usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y pip wheel
+
+/usr/local/opt/python@3.8/bin/python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
+/usr/local/opt/python@3.8/bin/python3 -m pip uninstall -y setuptools setuptools-scm
 
 # # brew tap # brewsci/science
 # # brew tap # brewsci/bio
@@ -304,3 +305,6 @@ brew uninstall bib-tool
 # brew uninstall --ignore-dependencies python@2
 # Remove outdated versions from the cellar
 # brew cleanup
+
+
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"

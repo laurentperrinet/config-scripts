@@ -71,7 +71,7 @@ brew install scipy # --without-python@2
 # python -c "import scipy; scipy.test() "
 python3 -m pip install -U statsmodels
 python3 -m pip install -U jedi
-python3 -m pip install -U nengo
+python3 -m pip uninstall -U nengo
 
 python3 -m pip install -U jedi
 
