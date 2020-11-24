@@ -6,6 +6,8 @@
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 # or simply use the following line:
 # xcode-select --install
+#sudo rm -rf /Library/Developer/CommandLineTools
+sudo xcode-select --install
 
 # 2. install HomeBrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -34,9 +36,11 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed #--with-default-names
+brew install zsh
 # running `chsh`.
+#sudo echo "$(which zsh)" >> /etc/shells
+#chsh -s /usr/local/bin/zsh # /bin/zsh
 chsh -s /bin/zsh
-brew uninstall zsh
 brew install zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -164,9 +168,10 @@ apm install latex-plus
 apm install todo-show
 
 # brew cask install tcl
+# fun
+brew install minetest
 
 # academic website
-brew install go
 brew install hugo
 
 #! /usr/bin/env zsh
@@ -177,7 +182,8 @@ brew tap homebrew/cask-fonts
 #brew cask install qfinder-pro
 brew cask uninstall --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
 
-for i in anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch
+
+for i in anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract
 do
   echo '📸  Installing ' $i
   # brew cask uninstall --force $i
