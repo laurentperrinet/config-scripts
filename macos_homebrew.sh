@@ -131,14 +131,14 @@ brew install brew-cask-completion
 # brew install hub
 
 # brew install Caskroom/cask/osxfuse
-brew cask install osxfuse
+brew install --cask osxfuse
 brew install sshfs
 brew install encfs
 
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 # brew install clinfo
-# brew cask uninstall todotxt
+# brew uninstall --cask todotxt
 
 # brew install mpg123
 # brew install vorbis-tools #--with-flac
@@ -158,7 +158,7 @@ brew install youtube-dl #--with-rtmpdump
 # npm install -g npm
 # npm install -g grunt-cli
 
-brew cask install atom
+brew install --cask atom
 apm install atom-ide-ui
 apm install ide-python
 apm install linter-python
@@ -167,11 +167,12 @@ apm install latex
 apm install latex-plus
 apm install todo-show
 
-# brew cask install tcl
+# brew install --cask tcl
 # fun
 brew install minetest
 
 # academic website
+brew install go
 brew install hugo
 
 #! /usr/bin/env zsh
@@ -179,20 +180,20 @@ brew install brew-cask-completion
 # Install native apps
 brew tap homebrew/cask-fonts
 
-#brew cask install qfinder-pro
-brew cask uninstall --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
+#brew install --cask qfinder-pro
+brew uninstall --cask --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
 
 
-for i in anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract
+for i in element anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract
 do
   echo '📸  Installing ' $i
-  # brew cask uninstall --force $i
-  brew cask install $i
+  # brew uninstall --cask --force $i
+  brew install --cask $i
 done
 
 case $(hostname -s) in
-  ada*) brew cask install iterm2-legacy ;; # older macOS
-  *) brew cask install iterm2 ;;
+  ada*) brew install --cask iterm2-legacy ;; # older macOS
+  *) brew install --cask iterm2 ;;
 esac
 
 
@@ -203,12 +204,12 @@ brew update; brew cask reinstall `brew outdated --cask --quiet`; brew cleanup
 
 # homebrew style cask install
 # Install native apps
-brew cask uninstall basictex
-brew cask install mactex
-brew cask install bibdesk
-brew cask install skim
-brew cask install texshop
-brew cask install tex-live-utility
+brew uninstall --cask basictex
+brew install --cask mactex
+brew install --cask bibdesk
+brew install --cask skim
+brew install --cask texshop
+brew install --cask tex-live-utility
 brew install gnupg
 
 sudo chown -R $USER  /usr/local/texlive
