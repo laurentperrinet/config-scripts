@@ -1,4 +1,8 @@
 #!/bin/bash
+
+
+PIP="python3 -m pip install -U"
+UNPIP="python3 -m pip uninstall -y"
 # 1. install Xcode:
 # From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
@@ -20,14 +24,14 @@ brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
 
 # python3 -m ensurepip --upgrade # https://docs.python.org/3.7/library/ensurepip.html
-python3 -m pip install -U pip wheel
-python3 -m pip install -U setuptools setuptools-scm
-python3 -m pip install -U twine
+$PIP pip wheel
+$PIP setuptools setuptools-scm
+$PIP twine
 
 # testing
-python3 -m pip install -U coverage
-python3 -m pip install -U pytest
-python3 -m pip install -U nose
+$PIP coverage
+$PIP pytest
+$PIP nose
 
 # numpy
 # sudo chown -R $(whoami):admin /usr/local
@@ -43,113 +47,113 @@ brew install cmake
 brew install fftw
 brew install libtool
 brew install numpy # --without-python@2
-# python3 -m pip install -U numpy #--with-openblas
-python3 -m pip install -U numexpr
-#python3 -m pip install -U numpy
-python3 -m pip install -U lazyarray
-python3 -m pip install -U sqlalchemy python-dateutil tqdm requests cached_property
+# $PIP numpy #--with-openblas
+$PIP numexpr
+#$PIP numpy
+$PIP lazyarray
+$PIP sqlalchemy python-dateutil tqdm requests cached_property
 brew install cython
 # ipython -c "import numpy; numpy.test() "
-python3 -m pip uninstall -y tables
-python3 -m pip uninstall -y h5py
-python3 -m pip install -U pillow
-python3 -m pip install -U quantities
-python3 -m pip install -U pandas
+$UNPIP tables
+$UNPIP h5py
+$PIP pillow
+$PIP quantities
+$PIP pandas
 # https://shapely.readthedocs.io/en/latest/manual.html
-python3 -m pip install -U fiona geopandas shapely fitparse
-python3 -m pip install -U seaborn
+$PIP fiona geopandas shapely fitparse
+$PIP seaborn
 brew uninstall hdf5
-python3 -m pip install -U lmfit
-python3 -m pip install -U easydict
+$PIP lmfit
+$PIP easydict
 
 # editing
 # brew install vim --override-system-vi # --with-python3
 # brew install macvim --env-std --override-system-vim --with-python3
 # scipy et al
-# python3 -m pip install -U scipy # --without-python@2
+# $PIP scipy # --without-python@2
 brew install scipy # --without-python@2
 # python -c "import scipy; scipy.test() "
-python3 -m pip install -U statsmodels
-python3 -m pip install -U jedi
-python3 -m pip uninstall -U nengo
+$PIP statsmodels
+$PIP jedi
+$UNPIP nengo
 
-python3 -m pip install -U jedi
+$PIP jedi
 
-python3 -m pip install -U psutil
+$PIP psutil
 # pip install -U powerline-status
 # sh ../libs/powerline-fonts/install.sh
 # mac stuff
-python3 -m pip install -U webassets
-python3 -m pip install -U markdown
-python3 -m pip install -U lxml
-python3 -m pip install -U ghp-import2
+$PIP webassets
+$PIP markdown
+$PIP lxml
+$PIP ghp-import2
 nikola plugin -i rest_html5
 nikola plugin -i tx3_tag_cloud
-python3 -m pip install -U "Nikola[extras]"
-python3 -m pip install -U  rst2html5
+$PIP "Nikola[extras]"
+$PIP  rst2html5
 # pylab
-python3 -m pip install -U pyparsing
-python3 -m pip install -U python-dateutil
+$PIP pyparsing
+$PIP python-dateutil
 # pip install git+git://github.com/matplotlib/matplotlib.git
-python3 -m pip install -U matplotlib
+$PIP matplotlib
 # python -c "import pylab; pylab.test() "
-python3 -m pip install -U imagen
-python3 -m pip install -U dask
-python3 -m pip install -U holoviews
-python3 -m pip install -U bokeh
-python3 -m pip install -U datashader
+$PIP imagen
+$PIP dask
+$PIP holoviews
+$PIP bokeh
+$PIP datashader
 
 # editing environment
 brew install zmq
-python3 -m pip install -U pyzmq
-python3 -m pip install -U pygments
-python3 -m pip install -U tornado
-python3 -m pip install -U jsonschema
-python3 -m pip install -U terminado
+$PIP pyzmq
+$PIP pygments
+$PIP tornado
+$PIP jsonschema
+$PIP terminado
 # to use nbconvert with the ipython notebook, you need to install pandoc
 brew cask install nteract
-python3 -m pip install ipykernel
+$PIP ipykernel
 python3 -m ipykernel install --user
 brew install pandoc
 brew install pandoc-citeproc
 brew install pandoc-crossref
-python3 -m pip install -U jinja2
+$PIP jinja2
 
 # JUPYTER
 
-python3 -m pip install -U jupyter
-python3 -m pip install -U ipywidgets
+$PIP jupyter
+$PIP ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
 jupyter nbextension enable --py  widgetsnbextension
-python3 -m pip install -U jupyterlab # --pre
-python3 -m pip install -U voila
+$PIP jupyterlab # --pre
+$PIP voila
 
-python3 -m pip install -U ipython[all]
-python3 -m pip install -U version-information watermark
-python3 -m pip install -U jupyter_contrib_nbextensions
+$PIP ipython[all]
+$PIP version-information watermark
+$PIP jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
-python3 -m pip install -U jupyter_nbextensions_configurator
+$PIP jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
 
-python3 -m pip install -U nbdime
+$PIP nbdime
 nbdime extensions --enable
 jupyter nbextension enable nbdime --py
 
-python3 -m pip install -U tqdm
-python3 -m pip install -U autopep8
+$PIP tqdm
+$PIP autopep8
 jupyter labextension uninstall  @ryantam626/jupyterlab_black
 jupyter labextension install @jupyterlab/shortcutui
 #jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
 #jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
 jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
 # https://github.com/ryantam626/jupyterlab_code_formatter
-python3 -m pip uninstall -y jupyterlab_code_formatter jupyterlab_black
+$UNPIP jupyterlab_code_formatter jupyterlab_black
 
 
-python3 -m pip install 'python-language-server[all]'
+$PIP 'python-language-server[all]'
 
 # https://github.com/jupyterlab/jupyterlab-git
-python3 -m pip install jupyterlab-git
+$PIP jupyterlab-git
 jupyter labextension install @jupyterlab/git
 jupyter serverextension enable --py jupyterlab_git
 jupyter labextension install @jupyterlab/toc
@@ -158,9 +162,9 @@ jupyter labextension install @jupyterlab/latex
 jupyter labextension install @jupyter-voila/jupyterlab-preview
 
 # https://github.com/jupyterlab/jupyterlab-latex
-python3 -m pip install jupyterlab_latex
-python3 -m pip install -U plotly
-python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
+$PIPjupyterlab_latex
+$PIP plotly
+# python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 
 jupyter labextension update --all
 jupyter lab build
@@ -173,112 +177,111 @@ jupyter lab build
 #
 brew install sip # --without-python@2
 # brew install pyqt --without-python@2
-python3 -m pip install -U sphinx
-python3 -m pip install -U sphinx_rtd_theme
+$PIP sphinx
+$PIP sphinx_rtd_theme
 # pygame
 # brew install --HEAD smpeg
 #brew uninstall sdl2 sdl2_image sdl2_mixer sdl2_ttf  sdl2_gfx sdl2_net
 #brew install sdl sdl_image sdl_mixer sdl_ttf  sdl_gfx sdl_net
 
 # pyglet
-python3 -m pip install -U pyglet
-python3 -m pip install -U pygame
-python3 -m pip install -U pyOpenGL
-python3 -m pip install -U gloo
+$PIP pyglet
+$PIP pygame
+$PIP pyOpenGL
+$PIP gloo
 
 # 1. install HomeBrew + python
 # sh osx_brew_python.sh
 
 # install scientific packages
 brew install libyaml
-python3 -m pip install -U pybtex
+$PIP pybtex
 #brew install --with-openblas --with-valgrind r
 #sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks
 #pip install -U rpy2
 
 # video utilities
-python3 -m pip install -U svgwrite
+$PIP svgwrite
 brew install x264
 brew install ffmpeg # --with-libvorbis --with-libvpx
-python3 -m pip install -U decorators
-python3 -m pip install -U imageio
-python3 -m pip install -U imageio-ffmpeg
-python3 -m pip install -U tqdm
-#python3 -m pip install -U git+https://github.com/meduz/moviepy@moviepy3
-python3 -m pip install -U gizeh
-# python3 -m pip install -U moviepy
-# python3 -m pip install -U https://github.com/Zulko/moviepy
-python3 -m pip install -U moviepy pygifsicle
+$PIP decorators
+$PIP imageio
+$PIP imageio-ffmpeg
+$PIP tqdm
+#$PIP git+https://github.com/meduz/moviepy@moviepy3
+$PIP gizeh
+# $PIP moviepy
+# $PIP https://github.com/Zulko/moviepy
+$PIP moviepy pygifsicle
 brew install povray
-python3 -m pip install -U vapory
-# python3 -m pip install -U git+https://github.com/vispy/vispy.git
-python3 -m pip install -U vispy
-python3 -m pip install -U napari
-python3 -m pip install -U pyprind
-python3 -m pip install -U pdfrw
+$PIP vapory
+# $PIP git+https://github.com/vispy/vispy.git
+$PIP vispy
+$PIP napari
+$PIP pyprind
+$PIP pdfrw
 python3 -m pip uninstall  itk
 
 # science
 # brew tap homebrew/science
 brew install mkl-dnn
-python3 -m pip install -U mkl-devel
-python3 -m pip install -U onnx
-python3 -m pip install -U pyyaml
+$PIP mkl-devel
+$PIP onnx
+$PIP pyyaml
 brew install protobuf # --without-python@2 --with-python
 # brew install tbb
 # mathematics
-python3 -m pip install -U sympy
+$PIP sympy
 #machine learning
-python3 -m pip install -U joblib
-# python3 -m pip install -U git+https://github.com/meduz/scikit-learn@sparsenet
-python3 -m pip install -U scikit-learn
-# python3 -m pip install -U git+https://github.com/scikit-learn/scikit-learn
-python3 -m pip install -U scikit-image
+$PIP joblib
+# $PIP git+https://github.com/meduz/scikit-learn@sparsenet
+$PIP scikit-learn
+# $PIP git+https://github.com/scikit-learn/scikit-learn
+$PIP scikit-image
 # BICV
-# python3 -m pip install -U git+https://github.com/bicv/SLIP
-# python3 -m pip install -U git+https://github.com/bicv/LogGabor
-# python3 -m pip install -U git+https://github.com/bicv/SparseEdges
-# python3 -m pip install -U SparseEdges
+# $PIP git+https://github.com/bicv/SLIP
+# $PIP git+https://github.com/bicv/LogGabor
+# $PIP git+https://github.com/bicv/SparseEdges
+# $PIP SparseEdges
 # deep learning
-# python3 -m pip install -U tensorflow
-python3 -m pip install tensorflow==1.14.0
-python3 -m pip install tensorflow-estimator==1.14.0
-python3 -m pip install tensorboard==1.14.0
+# $PIP tensorflow
+# python3 -m pip install tensorflow==1.14.0
+# python3 -m pip install tensorflow-estimator==1.14.0
+# python3 -m pip install tensorboard==1.14.0
 
 #wget https://download.pytorch.org/whl/cpu/torch-1.7.0-cp38-none-macosx_10_9_x86_64.whl -0 /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl
 #python3 -m pip install /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl # torch==1.1.0
 #python3 -m pip install torchvision #==0.2.1
 brew install libtorch torchvision
 
-python3 -m pip install -U dlib
-# python3 -m pip install -U torchvision-enhance
+$PIP dlib
+# $PIP torchvision-enhance
 #python3 -m pip install -U
 
-#python3 -m pip install -U python-pygaze
+#$PIP python-pygaze
 #python3 -m pip install git+https://github.com/esdalmaijer/PyGazeAnalyser
 
 # neuralensemble
 brew install gsl
-python3 -m pip install -U neo
-python3 -m pip install -U interval
-python3 -m pip install -U NeuroTools
-python3 -m pip install -U brian2
-python3 -m pip install -U brian2genn
-python3 -m pip install -U csa
+$PIP neo
+$PIP interval
+$PIP NeuroTools
+$UNPIP brian2 brian2genn
+$PIP csa
 brew install nest
-python3 -m pip install -U pynn
+$PIP pynn
 
 # latex, bibliography and friends
 # sh osx_install_tex_live.sh
 brew install bib-tool
-python3 -m pip install -U bibtexparser
+$PIP bibtexparser
 # brew install python
 # pyenv global homebrew
 # pyenv rehash
 
 # PAPIS https://papis.readthedocs.io/en/latest/install.html
-python3 -m pip install -U papis
-python3 -m pip install -U papis-zotero
+# $PIP papis
+# $PIP papis-zotero
 
 # pip2 install -U pip setuptools
 # python2 -m pip install ipykernel
@@ -291,11 +294,11 @@ python3 -m pip install -U papis-zotero
 # pip2 install  pyacoustid
 # brew install wxpython
 # pip2 install -U configobj
-# python3 -m pip install -U git+https://github.com/psychopy/psychopy
-# python3 -m pip install -U psychopy
+# $PIP git+https://github.com/psychopy/psychopy
+# $PIP psychopy
 
-python3 -m pip install -U pypng
-python3 -m pip install -U pyqrcode
+$PIP pypng
+$PIP pyqrcode
 
 
 # brew tap brewsci/science
@@ -303,4 +306,4 @@ python3 -m pip install -U pyqrcode
 
 brew uninstall --ignore-dependencies python@2
 # Remove outdated versions from the cellar
-brew cleanup
+# brew cleanup
