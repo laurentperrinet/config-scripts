@@ -250,8 +250,8 @@ $PIP scikit-image
 #wget https://download.pytorch.org/whl/cpu/torch-1.7.0-cp38-none-macosx_10_9_x86_64.whl -0 /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl
 #python3 -m pip install /tmp/torch-1.7.0-cp39-none-macosx_10_9_x86_64.whl # torch==1.1.0
 #python3 -m pip install torchvision #==0.2.1
-brew install libtorch torchvision
-
+brew uninstall libtorch torchvision
+$PIP torch torchvision pytorch_msssim
 $PIP dlib
 # $PIP torchvision-enhance
 #python3 -m pip install -U
