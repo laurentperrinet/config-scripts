@@ -181,10 +181,10 @@ brew install brew-cask-completion
 brew tap homebrew/cask-fonts
 
 #brew install --cask qfinder-pro
-brew uninstall --cask --force pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
+brew uninstall --cask --force element anaconda pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
 
 
-for i in element anaconda mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract
+for i in signal mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract
 do
   echo '📸  Installing ' $i
   # brew uninstall --cask --force $i
@@ -242,6 +242,9 @@ defaults write bibdesk "Cite Key Autogenerate" -int 1
 defaults write bibdesk "Cite Key Format Preset" -int 0
 defaults write bibdesk "Cite Prepend Tilde" -int 1
 defaults write bibdesk "Startup Behavior" -int 4
+
+# Python
+sh macos_python.sh
 
 # Remove outdated versions from the cellar
 # brew cleanup
