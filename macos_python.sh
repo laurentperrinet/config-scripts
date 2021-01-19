@@ -87,6 +87,7 @@ $PIP webassets
 $PIP markdown
 $PIP lxml
 $PIP ghp-import2
+$PIP nikola
 nikola plugin -i rest_html5
 nikola plugin -i tx3_tag_cloud
 $PIP "Nikola[extras]"
@@ -141,28 +142,25 @@ jupyter nbextension enable nbdime --py
 
 $PIP tqdm
 $PIP autopep8
-jupyter labextension uninstall  @ryantam626/jupyterlab_black
-jupyter labextension install @jupyterlab/shortcutui
+# jupyter labextension uninstall  @ryantam626/jupyterlab_black
+# jupyter labextension install @jupyterlab/shortcutui
 #jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
 #jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
-jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
+# jupyter nbextension uninstall @jupyter-autopep8-master/jupyter-autopep8
 # https://github.com/ryantam626/jupyterlab_code_formatter
-$UNPIP jupyterlab_code_formatter jupyterlab_black
-
+# $UNPIP jupyterlab_code_formatter jupyterlab_black
 
 $PIP 'python-language-server[all]'
 
 # https://github.com/jupyterlab/jupyterlab-git
 $PIP jupyterlab-git
-jupyter labextension install @jupyterlab/git
-jupyter serverextension enable --py jupyterlab_git
-jupyter labextension install @jupyterlab/toc
-jupyter labextension install @jupyterlab/latex
-
-jupyter labextension install @jupyter-voila/jupyterlab-preview
-
+# jupyter labextension install @jupyterlab/git
+# jupyter serverextension enable --py jupyterlab_git
+# jupyter labextension install @jupyterlab/toc
+# jupyter labextension install @jupyter-voila/jupyterlab-preview
 # https://github.com/jupyterlab/jupyterlab-latex
-$PIPjupyterlab_latex
+$PIP jupyterlab_latex
+# jupyter labextension install @jupyterlab/latex
 $PIP plotly
 # python3 -m pip install git+https://github.com/mkrphys/ipython-tikzmagic
 

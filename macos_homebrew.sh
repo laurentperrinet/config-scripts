@@ -154,9 +154,9 @@ brew install youtube-dl #--with-rtmpdump
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
-# brew install node
-# npm install -g npm
-# npm install -g grunt-cli
+brew install node
+npm install -g npm
+npm install -g grunt-cli
 
 brew install --cask atom
 apm install atom-ide-ui
