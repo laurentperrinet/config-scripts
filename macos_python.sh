@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
 PIP="python3 -m pip install -U"
 UNPIP="python3 -m pip uninstall -y"
+
 # 1. install Xcode:
 # From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
@@ -17,9 +17,9 @@ UNPIP="python3 -m pip uninstall -y"
 brew install python
 # rm /usr/local/bin/python /usr/local/bin/python3
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
+ln -s /usr/local/bin/python3 /usr/local/bin/python
 #ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python
 #ln -s /usr/local/opt/python@3.9/libexec/bin/python3 /usr/local/bin/python3
-
 brew uninstall python@2
 brew uninstall --ignore-dependencies python@2
 
@@ -92,6 +92,7 @@ nikola plugin -i rest_html5
 nikola plugin -i tx3_tag_cloud
 $PIP "Nikola[extras]"
 $PIP  rst2html5
+$PIP academic
 # pylab
 $PIP pyparsing
 $PIP python-dateutil
@@ -113,6 +114,11 @@ $PIP jsonschema
 $PIP terminado
 # to use nbconvert with the ipython notebook, you need to install pandoc
 brew cask install nteract
+# https://github.com/nteract/commuter
+# COMMUTER_LOCAL_STORAGE_BASEDIRECTORY=quantic/science commuter
+# http://localhost:4000
+npm install @nteract/commuter -g
+
 $PIP ipykernel
 python3 -m ipykernel install --user
 brew install pandoc
@@ -121,7 +127,7 @@ brew install pandoc-crossref
 $PIP jinja2
 
 # JUPYTER
-
+$PIP typing-extensions  Pillow babel nbconvert prometheus_client jupyter-contrib-nbextensions jupyter-server
 $PIP jupyter
 $PIP ipywidgets
 jupyter nbextension install --user --py widgetsnbextension
@@ -221,6 +227,7 @@ $PIP pdfrw
 python3 -m pip uninstall  itk
 
 # science
+$PIP MotionClouds
 # brew tap homebrew/science
 brew install mkl-dnn
 $PIP mkl-devel
@@ -234,6 +241,11 @@ $PIP sympy
 $PIP joblib
 # $PIP git+https://github.com/meduz/scikit-learn@sparsenet
 $PIP scikit-learn
+
+# neuromorphic
+brew uninstall rust
+brew install rustup-init
+$PIP parameterized loris tonic
 # $PIP git+https://github.com/scikit-learn/scikit-learn
 $PIP scikit-image
 # BICV
