@@ -131,7 +131,10 @@ brew install brew-cask-completion
 # brew install hub
 
 # brew install Caskroom/cask/osxfuse
-brew install --cask osxfuse
+# brew install --cask osxfuse
+brew uninstall osxfuse
+brew install macfuse
+
 brew install sshfs
 brew install encfs
 
