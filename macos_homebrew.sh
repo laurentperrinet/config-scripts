@@ -54,13 +54,7 @@ $BREW htop
 
 # Install `wget` with IRI support.
 $BREW wget #--with-iri
-
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-#$BREW ringojs
-#$BREW narwhal
-$UNBREW  hardlink
+# $UNBREW hardlink
 
 # Install more recent versions of some macOS tools.
 $BREW vim #--with-override-system-vi --without-python --with-python3  --override-system-vi
@@ -74,35 +68,7 @@ $BREW opus
 $BREW opus-tools
 
 
-# Install font tools.
-#brew tap bramstein/webfonttools
-#$BREW sfnt2woff
-#$BREW sfnt2woff-zopfli
-#$BREW woff2
-
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-#$BREW bfg
-#$BREW binutils
-#$BREW binwalk
-#$BREW cifer
-#$BREW dex2jar
-#$BREW dns2tcp
-#$BREW fcrackzip
-#$BREW foremost
-#$BREW hashpump
-#$BREW hydra
-#$BREW john
-#$BREW knock
-#$BREW nmap
-#$BREW pngcheck
-#$BREW socat
-#$BREW sqlmap
-#$BREW tcpflow
-#$BREW tcpreplay
-#$BREW tcptrace
-#$BREW ucspi-tcp # `tcpserver` etc.
-# $UNBREW xpdf
-#$BREW xz
 $BREW diff-pdf
 
 # Install other useful binaries.
@@ -137,12 +103,12 @@ $BREW brew-cask-completion
 # $BREW Caskroom/cask/osxfuse
 # $BREW --cask osxfuse
 # https://github.com/telepresenceio/telepresence/issues/1654#issuecomment-873538291
-$UNBREW sshfs
-$UNBREW osxfuse
+# $UNBREW sshfs
+# $UNBREW osxfuse
 $BREW macfuse
 #$BREW sshfs
 $BREW gromgit/fuse/sshfs-mac
-$UNBREW encfs
+#$UNBREW encfs
 $BREW gromgit/fuse/encfs-mac
 
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
@@ -194,21 +160,20 @@ brew tap homebrew/cask-fonts
 $UNBREW --cask --force element anaconda pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley
 
 
-for i in signal mattermost signal jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc spectacle xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero signal scratch gimp homebrew/cask-drivers/garmin-express spectacle signal nteract transmission-remote-gui raspberry-pi-imager
+for i in signal mattermost iterm2 jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi firefox font-symbola font-inconsolata seashore skype the-unarchiver vlc xquartz qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero scratch gimp homebrew/cask-drivers/garmin-express spectacle nteract transmission-remote-gui raspberry-pi-imager
 do
   echo '📸  Installing ' $i
   # $UNBREW --cask --force $i
   $BREW --cask $i
 done
 
-case $(hostname -s) in
-  ada*) $BREW --cask iterm2-legacy ;; # older macOS
-  *) $BREW --cask iterm2 ;;
-esac
-
+# case $(hostname -s) in
+#   ada*) $BREW --cask iterm2-legacy ;; # older macOS
+#   *) $BREW --cask iterm2 ;;
+# esac
 
 # upgrade
-brew update; brew cask reinstall `brew outdated --cask --quiet`; brew cleanup
+brew cask reinstall `brew outdated --cask --quiet`
 
 # 3. fetch and install texlive
 
@@ -572,9 +537,6 @@ $PIP pyqrcode
 # brew tap brewsci/science
 # brew tap brewsci/bio
 
-$UNBREW --ignore-dependencies python@2
+# $UNBREW --ignore-dependencies python@2
 # Remove outdated versions from the cellar
-# brew cleanup
-
-# Remove outdated versions from the cellar
-# brew cleanup
+brew cleanup
