@@ -260,6 +260,12 @@ $BREW opencv
 $BREW cmake graphviz libpng ninja protobuf wget
 # $BREW llvm@7
 
+# https://inivation.gitlab.io/dv/dv-docs/docs/getting-started/
+brew tap inivation/inivation
+$BREW libcaer --with-libserialport --with-opencv
+$BREW dv-runtime
+
+
 $BREW suite-sparse
 $BREW gcc
 $BREW cmake
