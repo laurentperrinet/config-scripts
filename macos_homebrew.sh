@@ -158,10 +158,10 @@ brew install -q brew-cask-completion
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
 
-#brew install -q --cask qfinder-pro
-brew uninstall -y --cask --force element anaconda pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine wireshark unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley firefox xquartz nteract
+brew uninstall --cask --force element anaconda pycharm-ce qfinder-pro evernote macvim openoffice cakebrew google-chrome owncloud  todotxt tunnelblick  adobe-acrobat-reader clamxav  dropbox thunderbird  unison pineapple arduino flash-player clementine unetbootin gitkraken virtualbox kitematic sourcetree docker-toolbox deepl near-lock java iina mendeley firefox xquartz nteract qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package 
 
-for i in signal mattermost iterm2 jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi font-symbola font-inconsolata seashore skype the-unarchiver vlc qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package meld balenaetcher inkscape zotero scratch gimp garmin-express spectacle  transmission-remote-gui raspberry-pi-imager visual-studio-code
+# for i in signal mattermost iterm2 jupyter-notebook-ql atom libreoffice libreoffice-language-pack chromium github psychopy flash-npapi font-symbola font-inconsolata seashore skype the-unarchiver vlc meld balenaetcher inkscape zotero scratch gimp garmin-express spectacle  transmission-remote-gui raspberry-pi-imager visual-studio-code
+for i in signal mattermost iterm2 libreoffice libreoffice-language-pack  github  the-unarchiver vlc meld balenaetcher inkscape zotero  gimp  visual-studio-code
 do
   echo '📸  Installing ' $i
   # brew uninstall -y --cask --force $i
